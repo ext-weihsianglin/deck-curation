@@ -1,6 +1,51 @@
 {
   "assets": [
     {
+      "id": "promoted-system-prompt",
+      "type": "document",
+      "source_id": "promoted-prompt-structure",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/demo-webapp/prompt-registry/p2/gpt-5-mini/candidates/gpt-5-mini--procedure--7dfc4cc51a03e4a5b6c72a9e/prompt.json",
+      "local_path": "assets/imported/promoted-system-prompt.txt",
+      "selection_note": "Complete effective_prompt from the supplied candidate's registry record, including all 14 procedure steps, fixed contract and language-preservation instructions. Only terminal blank lines normalized. Does not include the page-specific user JSON."
+    },
+    {
+      "id": "formal-prompt-reference",
+      "type": "diagram",
+      "source_id": "prompt-format-reference",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/formal_prompt.svg",
+      "local_path": "assets/imported/formal_prompt.svg",
+      "selection_note": "Visual reference for slide 9.5's stacked color-coded prompt anatomy, recreated in native HTML with the supplied prompt's actual sections."
+    },
+    {
+      "id": "p1-all-model-weights",
+      "type": "document",
+      "source_id": "p1-feature-contract",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/data/content-optimization-system/trad_ml_scorer/v7.1/model.joblib",
+      "local_path": "assets/imported/p1-model-weights.json",
+      "selection_note": "All transformed feature coefficients read from the trusted local v7.1 LR artifact; SHA256 recorded in the JSON."
+    },
+    {
+      "id": "bryteflow-top",
+      "type": "screenshot",
+      "source_id": "brief-report",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/analysis/brief-report.html",
+      "local_path": "assets/imported/bryteflow-top.png",
+      "selection_note": "Original report sample 01, full collapsed sample card captured at 2x; substantive extracted body verified for slide 4.5."
+    },
+    {
+      "id": "bryteflow-bottom",
+      "type": "screenshot",
+      "source_id": "brief-report",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/analysis/brief-report.html",
+      "local_path": "assets/imported/bryteflow-bottom.png",
+      "selection_note": "Original report sample 02, full collapsed sample card captured at 2x; substantive extracted body verified for slide 4.5."
+    },
+    {
       "id": "extraction-benchmark",
       "type": "chart",
       "source_id": "research-repo",
@@ -71,7 +116,370 @@
       "source_url": "https://raw.githubusercontent.com/ext-weihsianglin/demo-webapp/6c2cae734995e6aed1afb446512c9c9a62e99efd/verification/reconciled-model-error.jpg",
       "status": "candidate",
       "selection_note": "Optional trust-boundary evidence showing explicit failure behavior."
+    },
+    {
+      "id": "curated-landing",
+      "type": "screenshot",
+      "source_id": "p0-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/p0-landing-flow.pdf",
+      "local_path": "assets/imported/landing.png",
+      "sha256": "133ce32ef1e376b339dbb857c7c6d2f9a70ecf3c732e5d3c94805bc61b57c09d",
+      "page": 1,
+      "crop_points": [
+        44,
+        295,
+        568,
+        720
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-source-input",
+      "type": "screenshot",
+      "source_id": "p0-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/p0-landing-flow.pdf",
+      "local_path": "assets/imported/source-input.png",
+      "sha256": "133ce32ef1e376b339dbb857c7c6d2f9a70ecf3c732e5d3c94805bc61b57c09d",
+      "page": 2,
+      "crop_points": [
+        45,
+        25,
+        348,
+        706
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-parsed-page",
+      "type": "screenshot",
+      "source_id": "p1-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/p1-analysis-flow.pdf",
+      "local_path": "assets/imported/parsed-page.png",
+      "sha256": "c9a41bfff3372b07cd2c7a80b304bb2692af7618583b92acc6d809dbb541ffde",
+      "page": 1,
+      "crop_points": [
+        45,
+        295,
+        568,
+        720
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-query-scores",
+      "type": "screenshot",
+      "source_id": "p1-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/p1-analysis-flow.pdf",
+      "local_path": "assets/imported/query-scores.png",
+      "sha256": "c9a41bfff3372b07cd2c7a80b304bb2692af7618583b92acc6d809dbb541ffde",
+      "page": 2,
+      "crop_points": [
+        47,
+        112,
+        567,
+        660
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-rewrite-effects",
+      "type": "screenshot",
+      "source_id": "feature-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/feature-importance-integration-p1-delta-after-rewrite.pdf",
+      "local_path": "assets/imported/rewrite-effects.png",
+      "sha256": "a8697fc273b75061bbd2e4e00a613b7eeb838357e83edd478daf263ff5d14cc5",
+      "page": 2,
+      "crop_points": [
+        62,
+        307,
+        548,
+        649
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-query-regressions",
+      "type": "screenshot",
+      "source_id": "feature-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/feature-importance-integration-p1-delta-after-rewrite.pdf",
+      "local_path": "assets/imported/query-regressions.png",
+      "sha256": "a8697fc273b75061bbd2e4e00a613b7eeb838357e83edd478daf263ff5d14cc5",
+      "page": 3,
+      "crop_points": [
+        65,
+        82,
+        548,
+        444
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-model-weights",
+      "type": "screenshot",
+      "source_id": "feature-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/feature-importance-integration-p1-delta-after-rewrite.pdf",
+      "local_path": "assets/imported/model-weights.png",
+      "sha256": "a8697fc273b75061bbd2e4e00a613b7eeb838357e83edd478daf263ff5d14cc5",
+      "page": 4,
+      "crop_points": [
+        65,
+        333,
+        550,
+        649
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-fidelity-findings",
+      "type": "screenshot",
+      "source_id": "feature-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/feature-importance-integration-p1-delta-after-rewrite.pdf",
+      "local_path": "assets/imported/fidelity-findings.png",
+      "sha256": "a8697fc273b75061bbd2e4e00a613b7eeb838357e83edd478daf263ff5d14cc5",
+      "page": 1,
+      "crop_points": [
+        45,
+        514,
+        568,
+        746
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-draft-review",
+      "type": "screenshot",
+      "source_id": "feature-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/feature-importance-integration-p1-delta-after-rewrite.pdf",
+      "local_path": "assets/imported/draft-review.png",
+      "sha256": "a8697fc273b75061bbd2e4e00a613b7eeb838357e83edd478daf263ff5d14cc5",
+      "page": 1,
+      "crop_points": [
+        44,
+        296,
+        568,
+        501
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-exploit-score",
+      "type": "screenshot",
+      "source_id": "exploit-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/exploitation-proof-1.pdf",
+      "local_path": "assets/imported/exploit-score.png",
+      "sha256": "7b1d66f6c2a83e5aeff7b2bf4ef54bb4aed4d6c2531dad3876c2503539399f01",
+      "page": 2,
+      "crop_points": [
+        47,
+        26,
+        565,
+        270
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-exploit-translation",
+      "type": "screenshot",
+      "source_id": "exploit-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/exploitation-proof-1.pdf",
+      "local_path": "assets/imported/exploit-translation.png",
+      "sha256": "7b1d66f6c2a83e5aeff7b2bf4ef54bb4aed4d6c2531dad3876c2503539399f01",
+      "page": 23,
+      "crop_points": [
+        46,
+        30,
+        347,
+        399
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-guarded-score",
+      "type": "screenshot",
+      "source_id": "guardrail-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/exploitation-proof-1-language-guardrail.pdf",
+      "local_path": "assets/imported/guarded-score.png",
+      "sha256": "7dd6fbe901974a848bb781a0cb514cc10f96a4354feb8844244710c20acb4d3c",
+      "page": 2,
+      "crop_points": [
+        47,
+        25,
+        565,
+        216
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-gepa-config",
+      "type": "screenshot",
+      "source_id": "gepa-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/gepa-screenshot.pdf",
+      "local_path": "assets/imported/gepa-config.png",
+      "sha256": "b41d4a93d9ff12cc5df502250e39bdc7cfa0e5ccb2c85b813050945bff4b9de8",
+      "page": 1,
+      "crop_points": [
+        40,
+        447,
+        586,
+        723
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-gepa-selected",
+      "type": "screenshot",
+      "source_id": "gepa-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/gepa-screenshot.pdf",
+      "local_path": "assets/imported/gepa-selected.png",
+      "sha256": "b41d4a93d9ff12cc5df502250e39bdc7cfa0e5ccb2c85b813050945bff4b9de8",
+      "page": 1,
+      "crop_points": [
+        40,
+        314,
+        586,
+        448
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-gepa-frontier",
+      "type": "screenshot",
+      "source_id": "gepa-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/gepa-screenshot.pdf",
+      "local_path": "assets/imported/gepa-frontier.png",
+      "sha256": "b41d4a93d9ff12cc5df502250e39bdc7cfa0e5ccb2c85b813050945bff4b9de8",
+      "page": 3,
+      "crop_points": [
+        47,
+        24,
+        577,
+        146
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-gepa-progress",
+      "type": "screenshot",
+      "source_id": "gepa-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/gepa-screenshot.pdf",
+      "local_path": "assets/imported/gepa-progress.png",
+      "sha256": "b41d4a93d9ff12cc5df502250e39bdc7cfa0e5ccb2c85b813050945bff4b9de8",
+      "page": 2,
+      "crop_points": [
+        40,
+        69,
+        584,
+        235
+      ],
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-brief-report",
+      "type": "document",
+      "source_id": "research-repo",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/analysis/brief-report.html",
+      "local_path": "assets/imported/brief-report.html",
+      "sha256": "8a8bb361df4451588b0c1b8b5e9a6b3f6360a67c45c9a7492aa7121434e8f7ee",
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-extraction-evaluation",
+      "type": "document",
+      "source_id": "research-repo",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/analysis/extraction-evaluation.html",
+      "local_path": "assets/imported/extraction-evaluation.html",
+      "sha256": "26ea8f0e5debfc6512507aab0893f70e0f513f230f222ef2d791494e24b97d74",
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-scorer-v6",
+      "type": "document",
+      "source_id": "research-repo",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/.worktrees/deck-prototype-trad-ml-scorers/trad_ml_scorer/v6/report.html",
+      "local_path": "assets/imported/scorer-v6.html",
+      "sha256": "cf29e0f566a882065f7f5434d74a877034d8bba0a9c48f51f15914d13c3411cd",
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-scorer-v71",
+      "type": "document",
+      "source_id": "research-repo",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/.worktrees/deck-prototype-trad-ml-scorers/trad_ml_scorer/v7.1/report.html",
+      "local_path": "assets/imported/scorer-v71.html",
+      "sha256": "77883998af013a8724601903f43effb2c82e84823c4cf5dd2559b9a39677466f",
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "curated-fixed-prompt",
+      "type": "document",
+      "source_id": "research-repo",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/.worktrees/deck-prototype-trad-ml-scorers/trad_ml_scorer/interpretation/fixed_prompt/report.html",
+      "local_path": "assets/imported/fixed-prompt.html",
+      "sha256": "26c3739cb1d364513b10fadf84fd1a673474afd3057a13d09a7c4c2f652cb374",
+      "selection_note": "Selected and visually inspected for the directly authored HTML presentation."
+    },
+    {
+      "id": "report-findings-table",
+      "type": "screenshot",
+      "source_id": "brief-report",
+      "status": "selected",
+      "local_path": "assets/imported/report-findings-table.png",
+      "selection_note": "Browser-rendered excerpt from the supplied HTML, captured at 2x resolution."
+    },
+    {
+      "id": "report-schema",
+      "type": "screenshot",
+      "source_id": "brief-report",
+      "status": "selected",
+      "local_path": "assets/imported/report-schema.png",
+      "selection_note": "Browser-rendered excerpt from the supplied HTML, captured at 2x resolution."
+    },
+    {
+      "id": "gepa-tutorial-flow",
+      "type": "screenshot",
+      "source_id": "gepa-tutorial",
+      "status": "selected",
+      "local_path": "assets/imported/gepa-tutorial-flow.png",
+      "selection_note": "Browser-rendered excerpt from the supplied HTML, captured at 2x resolution."
+    },
+    {
+      "id": "lr-weight-scores-original",
+      "type": "document",
+      "source_id": "lr-weight-scores-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/lr-weight-scores.pdf",
+      "local_path": "assets/imported/lr-weight-scores.pdf",
+      "selection_note": "Unmodified original PDF; linked to weight section page 3."
+    },
+    {
+      "id": "lr-semantic-weight-plot",
+      "type": "chart",
+      "source_id": "lr-weight-scores-pdf",
+      "status": "selected",
+      "source_url": "/Users/ext-weihsiang.lin/Downloads/lr-weight-scores.pdf",
+      "local_path": "assets/imported/lr-semantic-weights.svg",
+      "selection_note": "Faithful vector redraw of page 3 semantic coefficients; common linear scale, signed values. Excludes other report groups; not a global importance ranking."
     }
   ]
 }
-

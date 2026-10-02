@@ -6,14 +6,13 @@
   "time_minutes": 2.5,
   "title": "Content Studio workflow",
   "purpose": "Translate the research into a user-facing workflow.",
-  "takeaway": "A reviewer can inspect a saved or custom page, score several target queries, generate attributed edits, and export the result.",
+  "takeaway": "Review a page, score several target queries, and inspect attributed draft changes in one workflow.",
   "theme": "paper",
   "layout": "screenshot",
-  "content": {"bullets": ["Load a saved example or paste an HTML, Markdown, or text snapshot.", "Inspect blocks, chunks, source statements, metadata, and per-query scores.", "Review attributed edits, score changes, regressions, and exported Markdown."]},
+  "content": {"bullets": ["Load a saved example or paste HTML, Markdown, or text.", "Inspect retained blocks, review flags, and per-query scores.", "Generate attributed edits and compare scores before export."]},
   "visual": {"asset_id": "demo-review", "treatment": "screen-with-callouts"},
   "links": [{"label": "Demo repository", "url": "https://github.com/ext-weihsianglin/demo-webapp"}],
   "source_refs": ["demo-repo"],
   "speaker_notes": ["The app processes submitted content in memory and never fetches or executes it."],
   "open_questions": ["Capture a current screenshot after the demo flow is frozen."]
 }
-

@@ -1,0 +1,255 @@
+{
+  "model": "lr-semantic-v7.1",
+  "artifact_sha256": "d1c4b25480a1579239b8fd9c8bfa7d3beac11bfa2ec591d8540941b6f89493cc",
+  "interpretation": "Standardized LR coefficients; not causal importance or rewrite recommendations. Includes missingness indicators.",
+  "terms": [
+    {
+      "feature": "path_similarity",
+      "coefficient": 0.12890071976472228
+    },
+    {
+      "feature": "title_similarity",
+      "coefficient": 0.10377239574705284
+    },
+    {
+      "feature": "prompt_comparison",
+      "coefficient": 0.09772213317188416
+    },
+    {
+      "feature": "prompt_question",
+      "coefficient": -0.09707878400719422
+    },
+    {
+      "feature": "path_homepage",
+      "coefficient": 0.0861507838897808
+    },
+    {
+      "feature": "missingindicator_path_similarity",
+      "coefficient": 0.0861507838897808
+    },
+    {
+      "feature": "path_commerce",
+      "coefficient": 0.08299865734703829
+    },
+    {
+      "feature": "sparse_body",
+      "coefficient": 0.0726861582460776
+    },
+    {
+      "feature": "prompt_how_to",
+      "coefficient": -0.07200750882043865
+    },
+    {
+      "feature": "log_heading_count",
+      "coefficient": 0.06902532517961749
+    },
+    {
+      "feature": "has_article_schema",
+      "coefficient": -0.05743894057993326
+    },
+    {
+      "feature": "path_editorial",
+      "coefficient": -0.0519926567216589
+    },
+    {
+      "feature": "path_depth",
+      "coefficient": -0.0508605209418726
+    },
+    {
+      "feature": "log_list_items",
+      "coefficient": 0.049204265071988385
+    },
+    {
+      "feature": "format_html",
+      "coefficient": 0.04864632047214469
+    },
+    {
+      "feature": "h1_similarity",
+      "coefficient": 0.04655004052184425
+    },
+    {
+      "feature": "page_similarity",
+      "coefficient": 0.04384550629721485
+    },
+    {
+      "feature": "headings_per_1000_words",
+      "coefficient": 0.042714564121847
+    },
+    {
+      "feature": "unique_word_fraction",
+      "coefficient": -0.038649017850368415
+    },
+    {
+      "feature": "paragraph_word_fraction",
+      "coefficient": -0.03761588590396239
+    },
+    {
+      "feature": "has_jsonld",
+      "coefficient": -0.03580049196832448
+    },
+    {
+      "feature": "missingindicator_h1_similarity",
+      "coefficient": 0.035661796269692105
+    },
+    {
+      "feature": "outline_similarity",
+      "coefficient": 0.03224225613508509
+    },
+    {
+      "feature": "has_table",
+      "coefficient": 0.031651701503720625
+    },
+    {
+      "feature": "section_q75",
+      "coefficient": 0.031206246462304254
+    },
+    {
+      "feature": "section_max",
+      "coefficient": 0.02880492821200083
+    },
+    {
+      "feature": "path_support_docs",
+      "coefficient": -0.027795220966908292
+    },
+    {
+      "feature": "missingindicator_outline_similarity",
+      "coefficient": 0.027750076637582534
+    },
+    {
+      "feature": "log_word_count",
+      "coefficient": 0.027352902523455673
+    },
+    {
+      "feature": "log_prompt_words",
+      "coefficient": -0.025735059317181907
+    },
+    {
+      "feature": "section_median",
+      "coefficient": 0.02542856441494403
+    },
+    {
+      "feature": "list_items_per_1000_words",
+      "coefficient": -0.02539221137358931
+    },
+    {
+      "feature": "log_link_count",
+      "coefficient": 0.02518956320144136
+    },
+    {
+      "feature": "retained_text_fraction",
+      "coefficient": -0.024510702245194596
+    },
+    {
+      "feature": "log_h1_count",
+      "coefficient": -0.02447639308268491
+    },
+    {
+      "feature": "has_list",
+      "coefficient": -0.02175488369814281
+    },
+    {
+      "feature": "section_top3_mean",
+      "coefficient": 0.021547483407261574
+    },
+    {
+      "feature": "log_table_count",
+      "coefficient": 0.020616516006618364
+    },
+    {
+      "feature": "log_title_words",
+      "coefficient": -0.019496344271320604
+    },
+    {
+      "feature": "log_source_script_count",
+      "coefficient": -0.01918442183194195
+    },
+    {
+      "feature": "paragraph_log_p90_words",
+      "coefficient": 0.016050258943373672
+    },
+    {
+      "feature": "log_paragraph_count",
+      "coefficient": 0.015578283498204178
+    },
+    {
+      "feature": "log_code_count",
+      "coefficient": -0.014569555037184665
+    },
+    {
+      "feature": "table_word_fraction",
+      "coefficient": 0.013172755497679768
+    },
+    {
+      "feature": "code_word_fraction",
+      "coefficient": -0.012282743197646955
+    },
+    {
+      "feature": "section_q25",
+      "coefficient": -0.011771423457902162
+    },
+    {
+      "feature": "needs_review",
+      "coefficient": 0.011210951060381329
+    },
+    {
+      "feature": "question_heading_fraction",
+      "coefficient": -0.010356138665813919
+    },
+    {
+      "feature": "numeric_word_fraction",
+      "coefficient": 0.010334703407638078
+    },
+    {
+      "feature": "heading_word_fraction",
+      "coefficient": 0.010063118649128946
+    },
+    {
+      "feature": "short_paragraph_fraction",
+      "coefficient": -0.01006025943877969
+    },
+    {
+      "feature": "links_per_1000_words",
+      "coefficient": -0.008153281237923585
+    },
+    {
+      "feature": "log_ordered_steps",
+      "coefficient": -0.006590797145421577
+    },
+    {
+      "feature": "missingindicator_headings_per_1000_words",
+      "coefficient": 0.005862003562524367
+    },
+    {
+      "feature": "missingindicator_list_items_per_1000_words",
+      "coefficient": 0.005862003562524367
+    },
+    {
+      "feature": "missingindicator_retained_text_fraction",
+      "coefficient": 0.005862003562524367
+    },
+    {
+      "feature": "empty_title",
+      "coefficient": 0.004995662450779545
+    },
+    {
+      "feature": "missingindicator_title_similarity",
+      "coefficient": 0.004995662450779545
+    },
+    {
+      "feature": "paragraph_log_median_words",
+      "coefficient": 0.0027733696426535024
+    },
+    {
+      "feature": "possible_error_response",
+      "coefficient": -0.0007885715809834401
+    },
+    {
+      "feature": "duplicate_heading_fraction",
+      "coefficient": 0.0
+    },
+    {
+      "feature": "list_item_word_fraction",
+      "coefficient": 0.0
+    }
+  ]
+}

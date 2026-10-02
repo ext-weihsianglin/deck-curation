@@ -1,6 +1,42 @@
 {
   "sources": [
     {
+      "id": "prompt-format-reference",
+      "kind": "local-document",
+      "title": "User's stacked prompt-format visual reference",
+      "location": "assets/imported/formal_prompt.svg",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "Copied from Downloads/formal_prompt.svg, the matching reference for the user's format-prompt.svg request. Layout inspiration only; actual prompt sections replace the example placeholders."
+    },
+    {
+      "id": "promoted-prompt-structure",
+      "kind": "local-document",
+      "title": "Structure of user-supplied promoted prompt and request payload",
+      "location": "sources/prompts/promoted-prompt-structure.json",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "Curated structural summary of the complete system/user messages supplied in conversation for slide 9.5. Not a replacement prompt or a recorded model output."
+    },
+    {
+      "id": "fidelity-judge-contract",
+      "kind": "local-document",
+      "title": "GPT-5 fidelity judge response schema and per-block reward policy",
+      "location": "../demo-webapp/.worktrees/deck-gepa-prototype/backend/app/fidelity.py",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "Raw response has edits keyed by block ID, each with verdict, category, reason and source_ids. Penalty mapping verified in app/gepa/reward.py. Slide 14 uses explicitly illustrative records, not a recorded model response."
+    },
+    {
+      "id": "p1-feature-contract",
+      "kind": "local-document",
+      "title": "P1 v7.1 feature contract and ordered feature manifest",
+      "location": "../data/content-optimization-system/trad_ml_scorer/v7.1/manifest.json",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "55 raw inputs verified against markdownify_context.py, semantic_features.py, retention_features.py and feature_dependencies.json in the deck-prototype-trad-ml-scorers research worktree. Slide 7 groups context features into six presentation families; size and structure combines two code families."
+    },
+    {
       "id": "project-brief",
       "kind": "local-document",
       "title": "Content Generation based on AEO signals",
@@ -28,7 +64,154 @@
       "access": "read-only",
       "checked_on": "2026-10-02",
       "notes": "Demo workflow, verification artifacts, real/mock boundaries, and operational limits."
+    },
+    {
+      "id": "baseline-rewrite-prompt",
+      "kind": "local-document",
+      "title": "Fixed v7 baseline rewrite prompt",
+      "location": "sources/prompts/rewrite-page-v7.txt",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "Reference copy from ../demo-webapp/.worktrees/deck-gepa-prototype/backend/app/prompts/rewrite-page-v7.txt. This is the fixed contract, not the previously promoted procedure used as the final GEPA run baseline."
+    },
+    {
+      "id": "p1-prompt-steering",
+      "kind": "local-document",
+      "title": "P1-informed GEPA reflection guidance",
+      "location": "../demo-webapp/.worktrees/deck-gepa-prototype/backend/app/gepa/adapter.py",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "Companion provenance: docs/gepa-p1-steering.md in the same worktree. Feature-derived guidance is in reflection instructions; historical v7 coefficients are not current v7.1 results."
+    },
+    {
+      "id": "response-v1",
+      "title": "First complete workshop response",
+      "location": "sources/reviews/storyline-workshop-responses-v1.json",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "response-v2",
+      "title": "Second complete workshop response",
+      "location": "sources/reviews/storyline-workshop-responses-v2.json",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "p0-pdf",
+      "title": "Supplied source input flow",
+      "location": "assets/imported/p0-landing-flow.pdf",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "p1-pdf",
+      "title": "Supplied P1 analysis flow",
+      "location": "assets/imported/p1-analysis-flow.pdf",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "feature-pdf",
+      "title": "Supplied feature effects and fidelity review",
+      "location": "assets/imported/feature-importance-integration-p1-delta-after-rewrite.pdf",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "gepa-pdf",
+      "title": "Supplied GEPA screenshots",
+      "location": "assets/imported/gepa-screenshot.pdf",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "exploit-pdf",
+      "title": "Supplied historical language exploit",
+      "location": "assets/imported/exploitation-proof-1.pdf",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "guardrail-pdf",
+      "title": "Supplied post-language-guardrail example",
+      "location": "assets/imported/exploitation-proof-1-language-guardrail.pdf",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "brief-report",
+      "title": "Original exploratory dataset report",
+      "location": "assets/imported/brief-report.html",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "extraction-report",
+      "title": "Original extraction benchmark",
+      "location": "assets/imported/extraction-evaluation.html",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "scorer-v71",
+      "title": "Markdownify v7.1 scorer report",
+      "location": "assets/imported/scorer-v71.html",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "corpus-record",
+      "title": "Real Markdownify source block and evidence chunk",
+      "location": "assets/imported/corpus-record.json",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "gepa-tutorial",
+      "title": "Supplied GEPA field guide",
+      "location": "assets/imported/gepa-explained.html",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "gepa-code",
+      "title": "GEPA reward and procedure implementation",
+      "location": "../demo-webapp/.worktrees/deck-gepa-prototype/backend/app/gepa/",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "gepa-export",
+      "title": "Completed GEPA run export",
+      "location": "/Users/ext-weihsiang.lin/Downloads/gepa-evidence-first-penalty-search-20261002-160122-ff558978.json",
+      "kind": "local-document",
+      "access": "read-only",
+      "checked_on": "2026-10-02"
+    },
+    {
+      "id": "lr-weight-scores-pdf",
+      "kind": "local-document",
+      "title": "User-selected P1 weight report",
+      "location": "/Users/ext-weihsiang.lin/Downloads/lr-weight-scores.pdf",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "sha256": "93de02e9d2764002e9fab2d3b72b49dd0f2821773fa0f65a75b71a6abbb06325",
+      "notes": "26-page Studio PDF. Weight section pages 3\u20136; slide 07 redraws all eight semantic rows from page 3, preserving values and signs."
     }
   ]
 }
-

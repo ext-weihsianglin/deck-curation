@@ -1,0 +1,15 @@
+{
+  "source": "User-supplied promoted system prompt and assisted-living user payload",
+  "representation": "Structural summary, not a verbatim copy or executable prompt",
+  "system": {
+    "promoted_procedure": ["Page and chunk planning", "FULL/PARTIAL/NONE query support", "Edit eligibility and minimal target selection", "Evidence-bound composition", "Literal coverage and voice checks", "Evidence packaging and output metadata", "Uncovered-query reporting", "Fidelity remediation", "Safety and optimization objective"],
+    "fixed_contract": ["Untrusted-input security", "Editable/read-only boundaries", "Same-chunk evidence", "Complete proposal schema", "Proposed/abstained policy", "Source-language preservation"]
+  },
+  "user_payload": ["Task, scope and target_queries", "P1 feedback and optimization objective", "Editorial tone and allow_structure", "Optimization rationale and reflection provenance", "Language policy", "Snapshot, extraction and source metadata", "Heading outline and chunks", "Editable blocks and read-only context"],
+  "output": {
+    "proposal": ["status", "blocks", "review_flags"],
+    "unchanged_block": null,
+    "changed_block": ["after", "reason", "evidence: [{block_id}]", "review_flags", "heading_level"]
+  },
+  "caveat": "Prompt-requested self-checks are not evidence of separate automated validators; fixed edit restrictions govern the supplied allow_structure=false payload."
+}

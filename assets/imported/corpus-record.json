@@ -1,0 +1,85 @@
+{
+  "snapshot_id": "00010ef3872629c36e0d32536a76702193b6e73ae9145df6d069b46184e535b0",
+  "source": {
+    "payload_hash": "68b57ad35ae31ceaee662f034324cd8411276623d7a930d6c7fb9b8237e89939",
+    "href": "https://sifted.eu/articles/top-early-stage-investors-nordics",
+    "hostname": "sifted.eu",
+    "format": "html",
+    "source_file": "citations_part_002.parquet",
+    "source_file_hash": "8437f3ac54554ece8939eeb82fb1f4275f81d3b4505dce59de21592517844976",
+    "source_row": 219
+  },
+  "block": {
+    "schema_version": "dom-blocks-v3",
+    "block_id": "b000002",
+    "order": 2,
+    "parent_id": null,
+    "type": "heading",
+    "text": "Top early-stage investors in the Nordics",
+    "heading_level": 1,
+    "links": [],
+    "table": null,
+    "source_locator": {
+      "dom_path": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/h1[1]"
+    },
+    "mapping_status": "normalized_match",
+    "inline_nodes": [
+      {
+        "type": "span",
+        "tag": "span",
+        "attributes": {
+          "data-br": ":R1ab5a6:",
+          "data-brr": "0.7",
+          "style": "display:inline-block;vertical-align:top;text-decoration:inherit"
+        },
+        "source_locator": {
+          "dom_path": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/h1[1]/span[1]"
+        },
+        "mapping_status": "exact",
+        "children": [
+          {
+            "type": "text",
+            "text": "Top early-stage investors in the Nordics",
+            "source_locator": {
+              "dom_path": "/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[1]/div[1]/h1[1]/span[1]",
+              "child_index": 0
+            },
+            "mapping_status": "exact"
+          }
+        ]
+      }
+    ],
+    "inline_markdown": "Top early-stage investors in the Nordics"
+  },
+  "chunk": {
+    "chunk_id": "f4a4caba575d6ca5335657a8abddb4ac4c43587113d1288d7bf9366826d14c02",
+    "snapshot_id": "00010ef3872629c36e0d32536a76702193b6e73ae9145df6d069b46184e535b0",
+    "method": "conservative_dom",
+    "order": 1,
+    "block_ids": [
+      "b000002"
+    ],
+    "block_schema_versions": [
+      "dom-blocks-v3"
+    ],
+    "heading_path": [
+      {
+        "block_id": "b000002",
+        "level": 1,
+        "text": "Top early-stage investors in the Nordics"
+      }
+    ],
+    "text": "Top early-stage investors in the Nordics",
+    "markdown": "# Top early-stage investors in the Nordics",
+    "characters": 42,
+    "oversized": false
+  },
+  "extraction": {
+    "pipeline_version": "retention-markdownify-corpus-v1",
+    "run_identity": "1ee4dfc2f06d020f198ae84cbfea0c5bfdedea3cec8223484d2ebd980e60a22e",
+    "block_schema_version": "dom-blocks-v3",
+    "serializer": "markdownify-structured-v1",
+    "elapsed_seconds": 0.266808,
+    "content_hash": "35b2eb30496d6efb0c1f4dcc8d05dd3e6d58e7f183b9511deeb08a5c4d871713"
+  }
+}

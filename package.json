@@ -4,8 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate.mjs",
+    "build:storyline": "sh scripts/build-presentation.sh",
+    "build": "sh scripts/build-presentation.sh",
+    "build:workshop": "node scripts/render-workshop.mjs",
+    "preview": "npm run build && python3 -m http.server 4173 --directory build",
+    "preview:workshop": "npm run build:workshop && python3 -m http.server 4173 --directory build",
+    "validate": "node scripts/validate-presentation.mjs",
     "status": "node scripts/status.mjs"
   }
 }
-

@@ -1,0 +1,546 @@
+{
+  "title": "Content optimization for answer engines",
+  "version": 1,
+  "pages": [
+    {
+      "id": "01",
+      "title": "Product title",
+      "role": "Open with the product claim and establish the ambition.",
+      "core_message": "A closed-loop system can analyze, rewrite, explain, and optimize a page against a group of answer-engine queries.",
+      "talking_points": [
+        "Lead with the product rather than the research process.",
+        "Describe the system as a multi-query content optimizer.",
+        "Keep the title simple enough to survive later naming changes."
+      ],
+      "visual": "Minimal cover with the selected product name and one-line description.",
+      "questions": [
+        "Which product name should lead the presentation?",
+        "Should the title emphasize citation optimization, multi-query optimization, or content intelligence?",
+        "What presenter name, role, and date should appear?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "**Multi-Query Content Optimizer** sounds better",
+        "multi-query optimization I guess, open for suggestion",
+        "Shawn Lin, 10/2/2026. No need to mention role."
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The scoped assignment",
+      "role": "Translate the broad project brief into a concrete customer problem.",
+      "core_message": "Can a host's strongest pages teach us how to improve its weakest?",
+      "talking_points": [
+        "The original brief asks us to discover citation-associated content patterns and apply them through generation.",
+        "We scoped that into a within-host improvement problem.",
+        "The product promise is to learn from a customer's strongest observed pages and improve weaker pages.",
+        "-- portrait the realworld scenario: hey, I can help make your 5 worst performing product pages as good as your top 5 most performant ones —, it’s a big IF on if they would pay, but we’re making a strong assumption here that by making the worst pages as good as good the best ones, regardless of their competitors the client still improve their brand visibility. but we haven't competitor data and citation outcomes, so we ignore that debate for now."
+      ],
+      "visual": "One hostname with five stronger and five weaker page-query scenarios.",
+      "questions": [
+        "Does this question match how you want to describe the work trial scope?",
+        "Should we explicitly call this a commercial assumption on this page?",
+        "Which customer or page example would make the problem feel concrete?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "I think it's learn from the highest performing pages to understand the patterns, then apply that learning into a recurrent content optimization engine",
+        "maybe, I'm not sure",
+        "The audience are group of potential peer ICs and potential EM/PM. this is a work trial and I'm interviewing for an IC position. But it'd be cool to sell as a product."
+      ]
+    },
+    {
+      "id": "03",
+      "title": "What shipped",
+      "role": "Show the complete product loop before explaining its components.",
+      "core_message": "We shipped the full path from raw-page inspection to explainable, guarded prompt optimization.",
+      "talking_points": [
+        "Input: hostname, page URL, raw HTML, and a group of target queries.",
+        "Understand: extract source-linked blocks and score every target query.",
+        "Rewrite: produce a coordinated, source-grounded page revision.",
+        "Explain: show diffs, score deltas, regressions, and feature effects.",
+        "Optimize: use DSPy-powered GEPA loops to improve the rewrite procedure."
+      ],
+      "visual": "Horizontal product flow using crops from P0 landing, P1 analysis, rewrite explanation, and GEPA screens.\n\nIf need more, interact with http://127.0.0.1:3005/ (locally deployed webapp)",
+      "questions": [
+        "Which of these five stages deserves the most emphasis?",
+        "What is the strongest one-sentence product description?",
+        "Is every stage shown here available in the demo you plan to present?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "Explain and Optimize. explain to onboard a user on why it's not performant, and optimize to take action and profit.",
+        "Not sure. Content optimization harness? creating the environment to empower agents to analyze host pages and simulate prompt cluster then optimize their page against potential prompt groups.",
+        "Yes."
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Data reality",
+      "role": "Define what the labels mean before using the scorer as an objective.",
+      "core_message": "The labels describe relative performance among already-cited pages within each hostname.",
+      "talking_points": [
+        "Each host contributes five stronger and five weaker cited page-query records.",
+        "Both classes received citations to some degree.",
+        "The modeled target is stronger-group membership within this sample.",
+        "Competitor-relative visibility requires additional signals."
+      ],
+      "visual": "The supplied data schema plus a within-host top-five versus bottom-five diagram.\n\nfile:///Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/analysis/brief-report.html\n\nmore here.",
+      "questions": [
+        "How plainly should we describe the balanced sampling limitation?",
+        "Do you want to state the commercial assumption that within-host improvement creates brand value?",
+        "Which missing competitor signals should appear here versus the next-steps page?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "what do you mean? I'm not follwoing",
+        "let's call out that its' strong assumption and loosely held. But yes. we think improving host's lowest performing page naturally creates value.",
+        "each record is supposedly an aggregated version of citation position, so I'm think enriching with co-occured host-entities and better if we could parse the cited positions for target host and competitor hosts."
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Why the score can guide optimization",
+      "role": "Explain why before-and-after movement is usable as a surrogate reward.",
+      "core_message": "Holding the host, query set, source inventory, and scorer fixed isolates feature movement caused by permitted content changes.",
+      "talking_points": [
+        "Hostname identity does not enter the scorer as a feature. -- mention the Probability model here, mention that hostname identity is a possible confounder, but we don't explicitly model in the scorer so its less severe",
+        "Before and after use the same ordered query set and frozen model. -- sell that we making it some content optimization each round only need to be better than the current version",
+        "Only permitted document content changes.",
+        "Unchanged contributions cancel on the model's log-odds scale.",
+        "The score is a surrogate optimization objective, not measured citation uplift."
+      ],
+      "visual": "A controlled before-and-after equation with fixed inputs dimmed and editable content highlighted.",
+      "questions": [
+        "How mathematical should this explanation be for the audience?",
+        "Should the slide show the log-odds equation or keep it in speaker notes?",
+        "What example score delta best demonstrates the controlled comparison?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Preprocessing: raw HTML -> structured formatted records",
+      "role": "Establish the structured representation used by every downstream stage.",
+      "core_message": "The system turns noisy HTML into source-linked blocks, chunks, metadata, and review flags without losing provenance.",
+      "talking_points": [
+        "Treat source HTML as untrusted input.",
+        "Preserve headings, prose, lists, tables, links, and source locations.",
+        "Separate editable prose from protected context.",
+        "Carry uncertain mappings forward for review."
+      ],
+      "visual": "P0 input screen followed by the parsed block and chunk representation. \n\nSample data from the markdownify chunk: /Users/ext-weihsiang.lin/Documents/profound/data/content-optimization-system/processed/markdownify-corpus-v1-complete/\n\nExplain the preprocessed data contract and what each field means.\n\nWe also projected all textual fields into openai text-embedding-large 3k dim embeddings and stored into a local vector store (just sharded vector tensor files for simplicity sake, for prod we'd use vector DBs)\n\nfile:///Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/analysis/extraction-evaluation.html\n\nhere's ablation for the different method we benched, but we ended up using markdownify for robustness, it's not captured in the html. lmk if we should do that now.",
+      "questions": [
+        "Which extraction details matter to this audience?",
+        "Should this focus on technical architecture or reviewer trust?",
+        "Which parsed-page screenshot is clearest at presentation scale?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "Let's discuss a bit more once we parsed the preprocessed examples",
+        "technical architecture. I'm amateur when it comes to frontend html and web scrapping but I did noticed stuff like these:\n\n- some href link are *.pdf and not easily parsible, without the visual parsing capability we can't recover the text? Or maybe it's doable?\n- DOM parsing naunces, we'd like to perserve all elements if possible but there are edgecases. I can't really ansewr to those but something I noticed in the sessions.",
+        "You can sample from the webapp deployed at local host, or derive from the preprocessed shards."
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Extraction evidence",
+      "role": "Show that the representation decision came from measured tradeoffs.",
+      "core_message": "Retention came first because missing evidence cannot be recovered by later scoring or rewriting.",
+      "talking_points": [
+        "Compare required-anchor retention with unwanted-anchor leakage.",
+        "Explain why a retention-first default accepts more review burden.",
+        "Show how the final Markdownify contract preserves inline and structural fidelity.",
+        "Keep benchmark limits visible."
+      ],
+      "visual": "Editable retention-versus-leakage comparison with the final contract highlighted.\n\nI think this page is highly overlapped with the previous page. but fine with splitting into 2.",
+      "questions": [
+        "Which benchmark result is the single most persuasive?",
+        "How much of the parser evolution should we show?",
+        "Should Markdownify appear as the final answer or as an implementation detail?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "08",
+      "title": "P1 scorer: P(cited-top-more-than-intra-host-pages | query, doc, host-metadata)",
+      "role": "Explain what the model sees and predicts.",
+      "core_message": "P1 combines query-page semantic similarity with document context to rank stronger versus weaker pages within the sampled task.",
+      "talking_points": [
+        "Compare each query with the title, H1, outline, page, path, and section chunks.",
+        "Add document-only structure and metadata context.",
+        "Use hostname-disjoint evaluation and a frozen feature contract.",
+        "Exclude hostname identity from the feature vector.",
+        "Make sure to call out that we don't model host-metadata at all, but if we were to train a transformer based encoder classifier it would model host-metadata by default due to inheritted world knowledge.",
+        "https://github.com/ext-weihsianglin/demo-webapp/pull/19/changes -- contains list of features that are important with their description",
+        "https://github.com/ext-weihsianglin/content-optimization-system/tree/main/trad_ml_scorer -- trace the feature definition",
+        "Useful htmls:",
+        "- file:///Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/.worktrees/deck-prototype-trad-ml-scorers/analysis/lr-baseline-plan.html",
+        "- file:///Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/.worktrees/deck-prototype-trad-ml-scorers/trad_ml_scorer/v6/report.html",
+        "- file:///Users/ext-weihsiang.lin/Documents/profound/content-optimization-system/.worktrees/deck-prototype-trad-ml-scorers/trad_ml_scorer/interpretation/fixed_prompt/report.html",
+        "Call out that it's for me to understand and dissect this problem space since I don't have SEO/GEO background."
+      ],
+      "visual": "One query branching into page views, then converging into a P1 score.",
+      "questions": [
+        "Which P1 version and result should be treated as final for the presentation?",
+        "Which metric best communicates usefulness without overloading the audience?",
+        "Do we need to compare P1 against alternative scorer workstreams?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        "I don't have anything to share atm, ModernBERT scorer is scoped but deferred due to time limitation. LR offers explainability which is very good."
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Explainable score movement",
+      "role": "Make the before-and-after score delta inspectable.",
+      "core_message": "Every query-level score change can be decomposed into positive and negative feature effects.",
+      "talking_points": [
+        "Show the before score, after score, and probability change.",
+        "Explain feature contributions on the log-odds scale.",
+        "Identify which content-derived signals improved or regressed.",
+        "Keep the full-model probability separate from additive feature effects."
+      ],
+      "visual": "Feature-importance integration screenshot focused on one query and its contribution table.\n\nA lot of those stuff are captured in my response in the previous page, but good to dive deeper. The webdemo could also show realtime feature importance estimation per query and across queries. Maybe just use real webapp examples.",
+      "questions": [
+        "Which query example tells the clearest story?",
+        "Should we show an improvement, a regression, or both?",
+        "How much statistical terminology will the audience tolerate here?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Multi-query content optimization Flow",
+      "role": "Show how the engine balances a group of customer queries.",
+      "core_message": "The optimizer improves the equal-weight mean while keeping every query-level regression visible.",
+      "talking_points": [
+        "Score every distinct target query.",
+        "Give the rewriter the complete query set and P1 feedback.",
+        "Produce one coordinated whole-page proposal.",
+        "Report mean movement, improvements, and regressions separately.",
+        "The basic idea is that we could add (so long as rewriter LLM context window permits) more potential queries and optimize at once, and the optimization goal is to improve the mean P1 score, the content needs to evovle in a direction that is generally helpful for a broad range of search prompts."
+      ],
+      "visual": "Query table showing before, after, and delta with the mean objective above it.",
+      "questions": [
+        "Is equal weighting the intended product behavior or only the current baseline?",
+        "How many queries should the demo use?",
+        "What level of per-query regression is acceptable?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "For now baseline, I could see an argument that some query are not satisfiable (e.g. can you check what time it is) and there should be a screening layer to downweight or filterout optmizing against less-related prompts. We can call that out in future todos",
+        "demo sample from held-out split which includes max 10 queries per host",
+        ""
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Score exploitation & Pitfalls",
+      "role": "Create the need for guardrails and a constrained reward.",
+      "core_message": "A capable optimizer will exploit whatever the objective fails to measure.",
+      "talking_points": [
+        "Score gains can come from keyword or structural manipulation.",
+        "The rewriter can invent unsupported guidance.",
+        "Cross-language semantic behavior can reward unwanted translation.",
+        "Mean improvement can conceal individual query damage.",
+        "Document my pitfall trajectory",
+        "- Before feeding the P1 contributing factors (page,h1,href/query semantic similarity; structural features etc.) the rewriter LLM only knows how to modify the editorial tone and rephrase certain sentence. ",
+        "- Then it start gaming the scorer by translating certain portion of paragraphs into Japanese for boosting JP prompts P1 scores while not tanking on other prompts that much. Rewriting should not translate, thus inspire the language guardrail",
+        "- Then it started to modify important factoids to fit the prompt (e.g Service expand support to Germany when its not, hallucinating price deals) thus inspiring the fidelity check LLM guardrail (ask GPT5 to assess if rewrite twisted the factoids, raise concern whenever detected) -- this is the worst of all. For GEPA loop we even had to model fidelity violation as penalty so model wouldn't game on this",
+        "Check  Downloads/exploitation-proof-1.pdf to show the Japanese example."
+      ],
+      "visual": "A score increase paired with a clearly unacceptable content change.",
+      "questions": [
+        "Which exploitation example had the strongest evidence?",
+        "Should this be framed as a red-team finding or expected optimizer behavior?",
+        "Which failure surprised you most during the trial?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "This is a good framing, imo, AEO is essentially a red/white team adversarial game, and red is incentivized to exploit, so we need to invest in leveling up white team or design arbiter rubrics otherwise the game's doomed to be lop-sided.",
+        ""
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Guarded improvement: Progress without sacrificing on guardrails",
+      "role": "Define the conditions under which a higher score is acceptable.",
+      "core_message": "A rewrite only counts as progress when it remains source-grounded, structurally valid, and language-preserving.",
+      "talking_points": [
+        "Require source evidence and valid block identities.",
+        "Protect noneditable structure and context.",
+        "Reject confident language changes.",
+        "Surface uncertain language checks for human review.",
+        "Fail visibly when validation or model execution fails.",
+        "(I don't know if we need this page, maybe split the previous page into 2?)"
+      ],
+      "visual": "Language-guardrail result plus a compact list of fidelity checks.",
+      "questions": [
+        "Which guardrails are hard failures versus review warnings?",
+        "Do we have one screenshot showing a rejected exploit clearly?",
+        "Which remaining guardrail gap matters most?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Inside the GEPA loop",
+      "role": "Explain how DSPy and GEPA evolve the rewrite procedure.",
+      "core_message": "GEPA searches over rewrite procedures using scored page outcomes and reflective feedback.",
+      "talking_points": [
+        "Start with a model-specific rewrite procedure.",
+        "Rewrite a frozen validation set.",
+        "Score every query and run fidelity checks.",
+        "Reflect on failures and propose the next candidate.",
+        "Keep P1 test pages outside optimization."
+      ],
+      "visual": "A circular GEPA loop paired with the run-configuration screenshot.\n\nI have a bunch of materials --\n- The most successfull loop: `Downloads/gepa-evidence-first-penalty-search-20261002-160122-ff558978.json` don't just openit, it's 600MB json, parse it. Basically that's the GEPA loop that gave us the most performant GPT5-mini rewriter prompt\n- HTML tutorial for GEPA: http://127.0.0.1:3000/gepa-explained.html ",
+      "questions": [
+        "How much DSPy background does the audience need?",
+        "What exactly can GEPA change in the current implementation?",
+        "Which frozen datasets belong in the loop versus final evaluation?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "Little, but I need to introduce what GEPA is, we should use the evolutionary algorithm visuals and analogy",
+        "Can you help me figure out what it improved? Check the latest prompt and try to interact with the webapp deployed to localhost.",
+        "Yes important to callout. We did 8:1:1 Train/Val/Test split. Val/ was sampled and used to split into reflection/selection splits for GEPA. 60 pages/30pages for faster iterations."
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Reward and budget",
+      "role": "Describe the objective and the limits placed on the search.",
+      "core_message": "The loop balances P1 performance against fidelity, language, and execution penalties within a fixed evaluation budget.",
+      "talking_points": [
+        "Use raw mean P1 as the performance signal.",
+        "Subtract penalties for factual concerns and other violations.",
+        "Track execution failures separately.",
+        "Bound candidate proposals, reflection pages, rounds, and calls."
+      ],
+      "visual": "Reward equation on the left and editable budget settings on the right.\n\nYeah feel free to sample the GEPA tab screen shot. ",
+      "questions": [
+        "What is the exact current reward formula?",
+        "Which budgets should we disclose on the slide?",
+        "What stopping rule did the final run use?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "Help me identify/confirm: mean-P1(page) - mean-Penalty(page)\n\nfor future we could layer in LLM as a judge scores to enrich the reward components. LR is a bit too weak a value model",
+        "50 prompt survival rounds, advance pareto frontier prompt by 50 times at most -- took around 30mins-1hour. all just API LLM calls.",
+        "It just stopped, the most advance frontier can be promoted as the new default prompt for rewriting,."
+      ]
+    },
+    {
+      "id": "15",
+      "title": "GEPA results",
+      "role": "Show that the search produces a visible frontier of tradeoffs.",
+      "core_message": "Candidate procedures vary in raw P1 performance, penalties, factual concerns, and execution reliability.",
+      "talking_points": [
+        "Compare raw mean P1, mean penalty, and final reward.",
+        "Show pages with factual concerns and execution-failure rate.",
+        "Distinguish evaluated frontier candidates from rejected proposals.",
+        "Promote procedures through review rather than silently replacing defaults."
+      ],
+      "visual": "GEPA candidate table with two or three contrasting rows enlarged.",
+      "questions": [
+        "Which run should be treated as the final result?",
+        "Which candidate won and why?",
+        "What quantitative improvement is safe to claim?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "16",
+      "title": "From research to product defaults",
+      "role": "Connect GEPA output back to the customer-facing workflow.",
+      "core_message": "Reviewed procedures become versioned, model-specific defaults that remain traceable and reversible.",
+      "talking_points": [
+        "Store candidate and promoted prompts in a versioned registry.",
+        "Bind procedures to compatible rewrite models.",
+        "Retain evaluation evidence and immutable identifiers.",
+        "Keep experimental procedures selectable without silently promoting them."
+      ],
+      "visual": "GEPA frontier feeding a prompt registry, then the Content Studio rewrite selector.",
+      "questions": [
+        "Which prompt-registry PR or screenshot best proves this integration?",
+        "Who should approve a promoted procedure in production?",
+        "What rollback story should we mention?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Live demo",
+      "role": "Demonstrate the complete product path on one page and query group.",
+      "core_message": "The product keeps source evidence, scoring feedback, proposed changes, and optimization results in one reviewable workflow.",
+      "talking_points": [
+        "Load one held-out page and its query group.",
+        "Inspect the parsed page and baseline P1 scores.",
+        "Generate and review the rewrite.",
+        "Compare query deltas and feature effects.",
+        "Show the optimized procedure or GEPA result."
+      ],
+      "visual": "Minimal demo agenda that remains visible while switching applications.",
+      "questions": [
+        "Which exact page and query group will you demo?",
+        "Which steps are live versus prerecorded or screenshot fallback?",
+        "What is the maximum demo duration?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "18",
+      "title": "What the prototype demonstrates",
+      "role": "Synthesize the evidence into the strongest supportable claims.",
+      "core_message": "Content optimization can be measurable, explainable, and guarded across a group of target queries.",
+      "talking_points": [
+        "The engine optimizes a page against several queries at once.",
+        "Controlled scoring makes content-driven movement inspectable.",
+        "Feature effects explain why the scorer moved.",
+        "Guardrails expose invalid gains.",
+        "GEPA improves the rewrite procedure systematically."
+      ],
+      "visual": "Five concise proof points linked back to earlier evidence slides.",
+      "questions": [
+        "Which claim are you most confident defending?",
+        "Which claim still feels too strong?",
+        "What should the team remember one week later?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "19",
+      "title": "What remains",
+      "role": "Show judgment about the path from prototype to production learning.",
+      "core_message": "The proxy enables iteration, but production learning still requires real citation outcomes and broader competitive context.",
+      "talking_points": [
+        "Measure citation changes after publication.",
+        "Add brand and competitor knowledge.",
+        "Capture citation position, co-occurrence, engine, and session context.",
+        "Expand adversarial evaluation and human review.",
+        "Define promotion, monitoring, and rollback policies."
+      ],
+      "visual": "Near-term validation work followed by longer-term product capabilities.",
+      "questions": [
+        "Which next step would create the most business value?",
+        "Which technical risk should be addressed first?",
+        "What would you prioritize if you joined Profound full time?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Discussion",
+      "role": "Open the conversation and transition into Q&A.",
+      "core_message": "Where should this optimization loop enter Profound's product?",
+      "talking_points": [
+        "Invite feedback on the product surface, evaluation contract, and customer value.",
+        "Keep supporting links and appendix evidence available outside the main canvas."
+      ],
+      "visual": "Minimal closing question with no additional diagram.",
+      "questions": [
+        "What question do you most want the team to debate?",
+        "Should this close on a product question, research question, or personal reflection?",
+        "Which backup slides or links should be one click away?"
+      ],
+      "status": "draft",
+      "presenter_notes": "",
+      "comments": "",
+      "answers": [
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "updated_at": "2026-10-02T18:29:30.811Z"
+}

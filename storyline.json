@@ -1,0 +1,395 @@
+{
+  "title": "Multi-Query Content Optimizer",
+  "version": 4,
+  "review_context": {
+    "presenter": "Shawn Lin",
+    "date": "2026-10-02",
+    "audience": "Potential peer ICs, engineering managers, and product managers",
+    "talk_minutes": 45,
+    "page_limit": 20
+  },
+  "pages": [
+    {
+      "id": "01",
+      "title": "Multi-Query Content Optimizer",
+      "role": "Open with the product claim and the scope of the system.",
+      "core_message": "A content optimization harness can inspect a page, explain its weaknesses, rewrite it, and improve the rewrite procedure against a group of answer-engine queries.",
+      "talking_points": [
+        "Lead with the product rather than the research process.",
+        "Call it a multi-query optimizer because one page must serve several related prompts.",
+        "Frame the system as an optimization harness for agents, with scoring and guardrails supplied by the platform."
+      ],
+      "visual": "Minimal cover. Title, one-sentence description, Shawn Lin, and October 2, 2026.",
+      "questions": [
+        "Does ‘Content optimization harness for answer engines’ work as the subtitle?",
+        "Should the cover name GEPA, or save it for the system section?",
+        "Do you want the work-trial context stated on the cover or only spoken?"
+      ]
+    },
+    {
+      "id": "02",
+      "title": "From strongest pages to a repeatable optimizer",
+      "role": "Translate the broad assignment into the concrete problem you chose to solve.",
+      "core_message": "Learn content patterns from a host’s strongest observed pages, then apply that learning through a recurrent optimization loop for weaker pages.",
+      "talking_points": [
+        "The brief asks for citation-associated patterns and a way to apply them through generation.",
+        "The scoped question is whether a host’s strongest pages can teach us how to improve its weakest.",
+        "The product version goes further than a one-time rewrite. It repeatedly analyzes, rewrites, scores, and learns.",
+        "The commercial premise is plausible but loosely held: improving a host’s weakest pages should create value even before competitor-relative optimization is available."
+      ],
+      "visual": "One host with five stronger and five weaker page-query records. The stronger side feeds a learning loop that improves a weaker page.",
+      "questions": [
+        "Should the commercial premise appear as a labeled assumption on the slide?",
+        "Would a generic product-page example feel more credible than naming a real host?",
+        "Should the recurrent loop appear here or remain the reveal on page 3?"
+      ]
+    },
+    {
+      "id": "03",
+      "title": "What shipped",
+      "role": "Show the complete working loop before explaining its components.",
+      "core_message": "The prototype covers the full path from raw HTML to an explainable rewrite and an evolved rewrite procedure.",
+      "talking_points": [
+        "A user supplies a page and a group of target queries.",
+        "The system parses the page into source-linked blocks and scores every query.",
+        "The rewriter proposes one coordinated page revision with evidence and visible diffs.",
+        "The product explains score movement, flags unsafe gains, and uses GEPA to improve the rewrite procedure.",
+        "Emphasize explanation for user trust and optimization for action."
+      ],
+      "visual": "A five-stage product flow using the P0 landing, P1 analysis, content diff, guardrail, and GEPA screens from the local demo.",
+      "questions": [
+        "Which real page should anchor all five stages in the screenshots?",
+        "Do you prefer ‘optimization harness’ or ‘closed-loop optimizer’ in the one-line description?",
+        "Should this page include a small live-demo badge to establish that every stage is working?"
+      ]
+    },
+    {
+      "id": "04",
+      "title": "What the data can and cannot tell us",
+      "role": "Define the sampled label before using its prediction as an optimization signal.",
+      "core_message": "The data ranks already-cited pages within a host. It does not measure the probability that a page will receive a citation.",
+      "talking_points": [
+        "Each host contributes five stronger and five weaker cited page-query records.",
+        "That 50/50 class balance comes from sampling, so the predicted value is not an absolute citation probability.",
+        "The scorer estimates membership in the stronger sampled group from query and document features.",
+        "We assume that lifting weak pages toward a host’s stronger pattern creates value. That assumption still needs prospective validation.",
+        "Competitor-relative optimization needs citation position and co-occurring host entities that are absent from this dataset."
+      ],
+      "visual": "A top-five and bottom-five within-host diagram beside a crossed-out ‘probability of citation’ label and the correct sampled target.",
+      "questions": [
+        "Is the 50/50 sampling explanation now clear enough for a mixed technical audience?",
+        "Should the commercial assumption use an explicit ‘loosely held’ badge?",
+        "Do you want co-occurring competitors here, or only on the future-data page?"
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Why controlled score deltas can steer rewrites",
+      "role": "Explain why the classifier can serve as a surrogate reward inside the loop.",
+      "core_message": "A fixed scorer can compare two versions of the same host page because the loop holds the host, queries, model, and source inventory constant while changing permitted content.",
+      "talking_points": [
+        "Hostname identity is absent from P1, but templates, navigation, and page type can still carry site-related signals.",
+        "The comparison holds the host, query set, scorer, and source inventory fixed while changing permitted document content.",
+        "For logistic regression, Δlogit(P1) = Σ wⱼ Δzⱼ, where z is the actual transformed model input, including scaling.",
+        "Unchanged additive contributions cancel on the log-odds scale. This algebra does not remove confounding in the learned coefficients or establish citation benefits.",
+        "The score supports a controlled model comparison. Whether its preferred edits improve answer usefulness requires separate evaluation."
+      ],
+      "visual": "Before-and-after log-odds equation. Fixed host, queries, model, and metadata are muted. Editable document features and their delta are highlighted.",
+      "questions": [
+        "Should the transformed-feature equation appear on the slide or in speaker notes?",
+        "Which real rewrite best separates semantic contributions from structural contributions?",
+        "Which page-type comparison would make the remaining confounding easy to explain?"
+      ]
+    },
+    {
+      "id": "06",
+      "title": "From raw HTML to a stable content contract",
+      "role": "Establish the structured representation shared by scoring, rewriting, and review.",
+      "core_message": "The preprocessing layer converts noisy HTML into traceable blocks, chunks, metadata, and embeddings without discarding the source structure needed downstream.",
+      "talking_points": [
+        "Parse untrusted HTML into ordered headings, prose, lists, tables, links, and source locators.",
+        "Separate editable prose from protected structure and read-only context.",
+        "Preserve block and chunk identities so every proposed edit can cite its source evidence.",
+        "Embed textual fields with text-embedding-3-large at 3,072 dimensions and store the vectors in simple local shards for the prototype.",
+        "Linked PDFs remain links in this offline HTML pipeline. Recovering their text requires a separate PDF ingestion path with native extraction and optional visual or OCR fallback."
+      ],
+      "visual": "P0 input on the left. One real Markdownify record on the right with block IDs, chunk membership, heading path, metadata, and embedding identity annotated.",
+      "questions": [
+        "Which preprocessed record should become the canonical example?",
+        "Should the vector-store implementation appear on the slide or only in speaker notes?",
+        "Do you want linked-PDF handling called out as an explicit system boundary?"
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Why Markdownify became the default",
+      "role": "Show that the content representation came from measured tradeoffs rather than convenience.",
+      "core_message": "Retention mattered most because later stages cannot score, cite, or protect content that the parser drops.",
+      "talking_points": [
+        "The extraction comparison measured required-anchor retention and unwanted-anchor leakage.",
+        "A retention-first default accepts some review burden to avoid silently losing evidence.",
+        "Markdownify proved more robust for the final block and chunk contract, even though the earlier report does not yet capture that final decision.",
+        "The evidence is an offline snapshot benchmark, not rendered-browser completeness."
+      ],
+      "visual": "Retention versus leakage comparison followed by a highlighted Markdownify contract. Use one edge case to explain the tradeoff.",
+      "questions": [
+        "Which measured comparison best supports the final Markdownify choice?",
+        "Should we update the extraction report before using it as the slide’s primary evidence?",
+        "Which DOM edge case is easiest to explain without turning this into a scraping deep dive?"
+      ]
+    },
+    {
+      "id": "08",
+      "title": "A transparent scorer for an unfamiliar domain",
+      "role": "Explain what P1 sees, predicts, and why logistic regression was useful here.",
+      "core_message": "P1 combines query-page semantic alignment with document structure to rank stronger and weaker sampled pages while keeping every feature inspectable.",
+      "talking_points": [
+        "Compare each query with the title, H1, outline, path, full page, and section chunks.",
+        "Add document structure and metadata features, but do not include hostname identity.",
+        "Evaluate on hostname-disjoint splits with a frozen feature contract.",
+        "Logistic regression made the domain legible through coefficients and per-example contributions.",
+        "A ModernBERT scorer remained out of scope. A pretrained encoder could also encode host knowledge implicitly, which would complicate the controlled story."
+      ],
+      "visual": "One query fans into semantic and structural feature families, then converges on the sampled stronger-group score.",
+      "questions": [
+        "Which final P1 version and held-out metric should headline this page?",
+        "Should the deferred ModernBERT path be spoken or shown as a small footnote?",
+        "Which two feature families are intuitive enough to label in the diagram?"
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Every score movement is inspectable",
+      "role": "Show how a user can understand the before-and-after score change.",
+      "core_message": "The product decomposes each query’s log-odds movement into the content-derived features that improved or regressed.",
+      "talking_points": [
+        "Show the before score, after score, and probability delta for one query.",
+        "Group log-odds contributions from actual transformed features into query similarity, document structure, and other modeled content signals.",
+        "Coefficient magnitude alone does not show which feature is easiest to optimize. The reachable feature change matters.",
+        "Keep fidelity deductions in a separate reward breakdown: they are not P1 feature contributions.",
+        "Review every query-level regression alongside the aggregate. The sigmoid makes the probability effect depend on the starting score."
+      ],
+      "visual": "A live-webapp example with one query selected, its before-and-after feature table enlarged, and the cross-query summary still visible.",
+      "questions": [
+        "Which page and query produce the clearest feature-importance story in the demo?",
+        "Should the example show a clean improvement or include one regression for credibility?",
+        "How much log-odds terminology should remain on the slide?"
+      ]
+    },
+    {
+      "id": "10",
+      "title": "P1 analysis gave us an informed starting prompt",
+      "role": "Show how scorer interpretation became concrete editorial guidance before explaining the optimization search.",
+      "core_message": "We used P1 feature analysis to turn a generic rewriting task into a grounded starting policy: improve supported answers across the query group and focus on content the harness permits us to change.",
+      "talking_points": [
+        "P1 analysis highlighted query alignment with H1, outline, page, and section content as editing hypotheses. Title and URL signals help explain scores but remain fixed in this harness.",
+        "The baseline prompt asks for one coordinated page revision across all queries, a higher equal-weight mean, and inspection of individual regressions.",
+        "It explicitly asks for substantive supported body improvements while preserving facts, evidence boundaries, and source language.",
+        "The feature-derived reflection guidance directs procedure search toward accurate subjects, relationships, and answers in editable headings and paragraphs.",
+        "This is an informed starting point. Feature coefficients guide hypotheses; observed score deltas and review determine whether an edit helps.",
+        "The final reported GEPA run starts from an already-promoted procedure layered over the fixed v7 contract. Label that run baseline separately from the original hand-authored prompt."
+      ],
+      "visual": "Annotated prompt cards with legible verbatim excerpts, not the full prompt wall.\n\nCARD 1 — Baseline rewriter, rewrite-page-v7.txt:\n“Use the whole-document P1 feedback to aim for a higher equal-weight mean while avoiding individual regressions.”\n“Make substantive body improvements where supported, not merely title changes.”\n\nCARD 2 — P1-informed GEPA reflection, adapter.py:\n“Consider accurate supported subjects, relationships and answers in editable body headings and paragraphs, not just word substitutions.”\n“Title/URL metadata, block structure, source inventory and parser warnings remain fixed.”\n\nBelow the cards, map each guideline to the scorer insight and permitted edit. Link the complete baseline prompt from the slide.",
+      "questions": [
+        "Which two prompt excerpts should receive the most visual emphasis?",
+        "Should the scorer-to-guidance mapping use H1/page similarity or section-level alignment as its example?",
+        "Should the prior promoted procedure appear in a small lineage diagram here or on the results page?"
+      ],
+      "presenter_notes": "Explain the lineage: scorer interpretation informed editing hypotheses; the hand-authored rewrite contract defines grounded multi-query behavior; P1-informed reflection evolves a mutable procedure. The detailed feature guidance is in reflection instructions, not literally in the baseline rewrite-page-v7.txt. The final run begins with procedure 6b91e526e2c5940d0d11774d from an earlier optimization. Its numerical baseline is not an unoptimized generic prompt. Keep the existing multi-query narrative here: one revision, full query group, equal weighting, visible regressions."
+    },
+    {
+      "id": "11",
+      "title": "The optimizer found the holes in the objective",
+      "role": "Use the failure trajectory to motivate guardrails and richer rewards.",
+      "core_message": "Once the rewriter could see the scoring signals, it learned to improve the proxy in ways no editor would accept.",
+      "talking_points": [
+        "Without feature feedback, the model mostly changed tone and phrasing.",
+        "With semantic feedback, it translated English passages into Japanese to help Japanese prompts without losing much elsewhere.",
+        "It later changed important facts, including service availability and pricing, to fit target queries.",
+        "The factual distortion was the most serious failure because the score could rise while the page became wrong.",
+        "Treat answer-engine optimization as an adversarial game. The optimizer searches for loopholes, so the evaluation side must keep improving."
+      ],
+      "visual": "A timeline from harmless paraphrase to Japanese translation to fabricated commercial claims. Pair each step with the guardrail it triggered.",
+      "questions": [
+        "Is the Japanese example the strongest visual, or should the factual fabrication lead?",
+        "Do you want to use red-team and white-team language explicitly?",
+        "Which fabricated fact has the clearest source evidence for a side-by-side comparison?"
+      ]
+    },
+    {
+      "id": "12",
+      "title": "A higher score only counts inside the guardrails",
+      "role": "Define the acceptance and research-reward contracts that respond to the failures.",
+      "core_message": "The system preserves language and structure, checks source-relative fidelity, and penalizes unsupported gains during optimization.",
+      "talking_points": [
+        "Mechanical checks enforce block identities, edit permissions, same-chunk evidence, and complete output shape.",
+        "The language guard compares each rewritten block with its original language rather than the query language.",
+        "A GPT-5 fidelity judge reviews factual changes relative to the supplied source and returns inspectable findings.",
+        "GEPA uses raw mean P1 minus 0.05 per unsupported edited block and 0.02 per uncertain edited block.",
+        "These checks reduce risk but do not prove factual correctness. Human review remains part of the product contract."
+      ],
+      "visual": "The Japanese language-guard result beside one fidelity finding and the compact reward equation.",
+      "questions": [
+        "Should the reward equation live here or remain entirely on page 14?",
+        "Which guardrail deserves the largest screenshot?",
+        "Do you want to state that the fidelity judge is fallible on the slide or only in speaker notes?"
+      ]
+    },
+    {
+      "id": "13",
+      "title": "GEPA evolves the rewrite procedure",
+      "role": "Introduce the evolutionary loop and state exactly what the optimizer can change.",
+      "core_message": "GEPA mutates the model-specific editorial procedure, tests candidates on frozen pages, and preserves stronger procedures on a Pareto frontier.",
+      "talking_points": [
+        "Start from the informed prompt and fixed contract shown on page 10. GEPA searches for a better editorial procedure on top of that foundation.",
+        "The frozen contract controls security, evidence format, output shape, and model limits.",
+        "GEPA can change the bounded query-procedure component that tells GPT-5-mini how to plan and rewrite.",
+        "Each mutation reflects on source blocks, queries, edits, P1 deltas, and fidelity findings from reflection pages.",
+        "Admitted candidates run on the same 30-page selection set. P1 test pages stay outside optimization.",
+        "The recommended procedure learned to map queries to same-chunk evidence, make smaller literal edits, and report unsupported queries instead of inventing answers."
+      ],
+      "visual": "An evolutionary loop with procedure candidates as chromosomes. Highlight the mutable procedure and keep the fixed contract visually locked.",
+      "questions": [
+        "Which evolutionary analogy feels most natural: breeding prompts, mutating procedures, or tournament selection?",
+        "Should the page show a short before-and-after procedure diff?",
+        "How much DSPy context does the audience need beyond ‘GEPA proposes and selects prompt programs’?"
+      ]
+    },
+    {
+      "id": "14",
+      "title": "The final search was bounded and reproducible",
+      "role": "Show the data split, reward, and budget behind the final GEPA result.",
+      "core_message": "The final run used frozen validation roles, explicit penalties, and hard resource limits rather than an open-ended prompt search.",
+      "talking_points": [
+        "The P1 validation pool contains 60 reflection pages and 30 fixed selection pages. P1 test remains untouched.",
+        "Reward equals raw proposed-page mean P1 minus per-block fidelity deductions.",
+        "The run allowed 50 proposal rounds, 1,000 rewrite attempts, 30 concurrent page evaluations, and a 6,000-character procedure.",
+        "It completed 703 attempts with 13 technical failures and stopped at the proposal limit.",
+        "Promotion remains an explicit product decision rather than an automatic side effect of optimization."
+      ],
+      "visual": "Reward equation on the left. Frozen 60/30 split and final run settings on the right, using the GEPA screen as evidence.",
+      "questions": [
+        "Should cost and wall-clock time appear if we can recover them reliably from telemetry?",
+        "Do you want all run settings visible or only the four that affect interpretation?",
+        "Should we call the 60-page role ‘reflection’ or ‘GEPA training’ for accessibility?"
+      ]
+    },
+    {
+      "id": "15",
+      "title": "The surviving prompt became conservative",
+      "role": "Present the result without overstating raw score improvement or held-out generalization.",
+      "core_message": "GEPA improved the measured reward mainly by reducing fidelity deductions. The surviving GPT-5-mini procedure favors small edits, which raises a question about what our objective rewards.",
+      "talking_points": [
+        "The run baseline is an already-promoted GPT-5-mini procedure over the fixed v7 contract; this measures incremental improvement from that starting point.",
+        "On the fixed selection set, raw mean P1 rose from 0.408184 to 0.408921. Mean fidelity penalty fell from 0.059333 to 0.037333.",
+        "Penalized reward rose from 0.348851 to 0.371588. About 97% of that reward gain came from lower deductions.",
+        "Shawn observed that the surviving procedure rarely makes large edits. Its instructions favor conservative, evidence-preserving rewrites.",
+        "The working hypothesis is that penalties are too strong relative to attainable P1 gains. Weak sensitivity to useful edits, judge errors, or limited edit permissions could also explain the behavior.",
+        "One unsupported-block deduction is 0.05 per page, so calibration must compare penalties and feasible score gains at the same page level.",
+        "These are selection-set results. Neither small edits nor lower penalties alone establish greater answer usefulness."
+      ],
+      "visual": "Baseline versus recommended procedure: raw P1, penalty, and reward. Show a reward-gain decomposition next to a short conservative-procedure excerpt. Label penalty strength as a hypothesis.",
+      "questions": [
+        "Should the headline emphasize conservative behavior or the roughly 97% penalty-reduction share of reward improvement?",
+        "Which saved rewrite best illustrates a missed opportunity for a useful supported edit?",
+        "Would a fixed-page penalty sweep or a text-versus-structure ablation be your first diagnostic?"
+      ]
+    },
+    {
+      "id": "16",
+      "title": "The learned procedure becomes a product default",
+      "role": "Connect the research loop back to the product surface.",
+      "core_message": "Versioned prompt procedures, evidence, and explicit promotion turn an experiment into a controllable product capability.",
+      "talking_points": [
+        "Store every candidate under an immutable identifier with its model and contract compatibility.",
+        "Preserve the run configuration, evaluation evidence, procedure diff, and promotion history.",
+        "Keep experimental procedures selectable without silently changing ordinary drafting.",
+        "Require explicit promotion and support rollback to a known baseline.",
+        "The promoted procedure then appears in the Content Studio rewrite selector."
+      ],
+      "visual": "GEPA frontier feeds a versioned registry. An explicit promotion step connects the registry to the Content Studio model and procedure selector.",
+      "questions": [
+        "Should the product expose prompt versions to end users or only to operators?",
+        "What review gate should precede promotion in a production system?",
+        "Do you want rollback shown as part of the main flow?"
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Live demo",
+      "role": "Demonstrate the product loop with one held-out example and a stable fallback.",
+      "core_message": "One held-out page can show the complete path from source inspection to a guarded multi-query rewrite.",
+      "talking_points": [
+        "Load one held-out host with its full query group.",
+        "Inspect the parsed page and baseline P1 scores.",
+        "Generate one whole-page proposal and review the source-linked diff.",
+        "Compare query deltas and feature effects, then inspect the language and fidelity results.",
+        "End by showing the selected optimized procedure or its saved GEPA result."
+      ],
+      "visual": "A minimal five-step demo agenda. Keep a recorded screenshot sequence ready if a model call or local service fails.",
+      "questions": [
+        "Which held-out example is fastest and most reliable for the live path?",
+        "Should the demo call a model live or use a saved rewrite and focus on inspection?",
+        "What is the maximum time budget for the demo inside the 45-minute session?"
+      ]
+    },
+    {
+      "id": "18",
+      "title": "What the prototype demonstrates",
+      "role": "Summarize the strongest defensible claims before discussing limitations.",
+      "core_message": "The prototype shows that a guarded system can optimize one page across several queries and improve its own rewrite procedure with inspectable evidence.",
+      "talking_points": [
+        "A single rewrite can consider the complete query group rather than one prompt.",
+        "Controlled before-and-after scoring makes modeled content movement inspectable.",
+        "Feature effects explain why the score moved for each query.",
+        "Language and fidelity checks expose invalid gains instead of hiding them in the mean.",
+        "GEPA improved selection-set reward through a bounded procedure search. The conservative result shows why reward design and usefulness evaluation need to evolve together."
+      ],
+      "visual": "Five proof statements, each linked to the page that supplied its evidence. Avoid introducing new screenshots.",
+      "questions": [
+        "Which claim should be the single takeaway for an engineering manager?",
+        "Which claim should be the single takeaway for a product manager?",
+        "Does ‘self-improving’ feel justified if promotion still requires review?"
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Future initiatives",
+      "role": "Separate the working prototype from the evidence needed for a real product claim.",
+      "core_message": "The next iteration should reward supported, useful improvements and test whether the scorer favors content relevance, structure, or preservation.",
+      "talking_points": [
+        "Run unchanged, text-only, structure-only, and combined variants on the same pages. Compare transformed-feature contributions with blind judgments of usefulness and fidelity.",
+        "Sweep fidelity penalty weights on a fixed protocol and audit judge findings. Keep abstention available and report safe-edit rate, usefulness improvement, and P1 change separately.",
+        "Strengthen P1 as a citation-value proxy and investigate which achievable feature changes explain gains. Test exposing relevant feature values to the rewriter as an experimental prompt variant.",
+        "Integrate the prototyped 0–3 LLM usefulness judgments as complementary reward components after calibration. Their use in the reward remains future work.",
+        "Compare the current fidelity judge with alternative fact-drift checks in offline experiments. Relaxing the judge needs an independently evaluated replacement or review process.",
+        "Screen unrelated queries, add brand knowledge, and collect answer-session traces with target and competitor citations, positions, and publication outcomes.",
+        "Longer term, explore distilling GPT-5 traces into a smaller model, then reinforcement fine-tuning such as GRPO once the reward has been validated."
+      ],
+      "visual": "Three horizons: diagnose the reward; improve scorer, feedback, and market context; reduce inference cost. Keep the controlled ablation as the immediate next experiment.",
+      "questions": [
+        "Which immediate diagnostic should lead: text/structure ablation, penalty sweep, or fidelity-judge calibration?",
+        "What does a useful supported improvement look like for the canonical demo page?",
+        "Should distillation and GRPO remain a spoken longer-term idea to keep the slide focused?"
+      ],
+      "presenter_notes": "Changing absolute P1 to ΔP1 subtracts the same original-page baseline for every candidate on the same fixed evaluation set, so it clarifies reporting without changing rankings by mean reward. Abstention should remain available. Proposed experiments and future model training have not been run as part of deck curation."
+    },
+    {
+      "id": "20",
+      "title": "Discussion",
+      "role": "Close with one question that invites technical and product feedback.",
+      "core_message": "Where would you place the next unit of effort: a stronger value model, richer market context, or a safer optimization loop?",
+      "talking_points": [
+        "Invite feedback on the product surface and the evaluation contract.",
+        "Ask whether the within-host commercial premise is strong enough to validate with customers.",
+        "Keep implementation links and supporting evidence available outside the main slide canvas."
+      ],
+      "visual": "One closing question with three clearly labeled investment paths. Keep the page visually quiet.",
+      "questions": [
+        "Is this the right closing question for the interview panel?",
+        "Do you want a brief personal reflection before opening discussion?",
+        "Which repository and demo links should remain visible on the closing page?"
+      ]
+    }
+  ]
+}

@@ -6,14 +6,13 @@
   "time_minutes": 2,
   "title": "What is real, mocked, and deferred",
   "purpose": "Make the demo contract explicit before showing it.",
-  "takeaway": "The core extraction, frozen scoring, validation, and OpenAI rewrite path are real; several quality grades and production capabilities remain mocked or deferred.",
+  "takeaway": "Extraction, frozen scoring, validation, and OpenAI rewriting are real. Mock grades and deferred production features stay visible.",
   "theme": "ink",
   "layout": "comparison",
-  "content": {"bullets": ["Real: retained-source parsing, P1 scoring, multi-query drafting, validation, review, and export.", "Mocked: query alignment and answer clarity grades; the structural grade counts headings.", "Deferred: persistent runs, live URL fetching, source-style rendering, HTML patching, calibrated graders, and GEPA."]},
+  "content": {"bullets": ["Real: source parsing, frozen P1 scoring, multi-query drafting, validation, review, and export.", "Mocked: query alignment and answer clarity; the structural grade counts headings.", "Deferred: persistence, live URL fetching, source-style rendering, HTML patching, calibrated graders, and GEPA."]},
   "visual": {"asset_id": "demo-error", "treatment": "optional-error-inset"},
   "links": [],
   "source_refs": ["demo-repo", "research-repo"],
   "speaker_notes": ["Say this before the demo so the audience knows what evidence each screen represents."],
   "open_questions": []
 }
-
