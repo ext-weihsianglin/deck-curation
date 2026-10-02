@@ -1,0 +1,19 @@
+{
+  "id": "15-appendix-definitions",
+  "status": "outline",
+  "section": "appendix",
+  "appendix": true,
+  "time_minutes": 0,
+  "title": "Metric definitions",
+  "purpose": "Support detailed questions without slowing the main deck.",
+  "takeaway": "The evaluation metrics describe bounded prediction and extraction tasks, not end-to-end citation uplift.",
+  "theme": "appendix",
+  "layout": "reference",
+  "content": {"bullets": ["Required-anchor retention: eligible required anchors preserved by an extractor.", "Unwanted-anchor leakage: eligible unwanted anchors preserved by an extractor.", "ROC-AUC: how often a sampled top record ranks above a sampled bottom record.", "Within-host AUC: the same ranking comparison averaged separately across websites."]},
+  "visual": {"asset_id": "v7-uncertainty", "treatment": "small-reference-chart"},
+  "links": [],
+  "source_refs": ["research-repo"],
+  "speaker_notes": [],
+  "open_questions": []
+}
+

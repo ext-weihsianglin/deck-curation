@@ -1,0 +1,77 @@
+{
+  "assets": [
+    {
+      "id": "extraction-benchmark",
+      "type": "chart",
+      "source_id": "research-repo",
+      "repo_path": "analysis/extraction-evaluation.html",
+      "source_url": "https://github.com/ext-weihsianglin/content-optimization-system/blob/6a9606d3febaf62f76c8448c44f91a120107e5a6/analysis/extraction-evaluation.html",
+      "status": "candidate",
+      "selection_note": "Capture or rebuild the held-out retention/leakage comparison with exact denominators."
+    },
+    {
+      "id": "v7-comparison",
+      "type": "chart",
+      "source_id": "research-repo",
+      "repo_path": "trad_ml_scorer/v7/comparison.png",
+      "source_url": "https://raw.githubusercontent.com/ext-weihsianglin/content-optimization-system/6a9606d3febaf62f76c8448c44f91a120107e5a6/trad_ml_scorer/v7/comparison.png",
+      "status": "candidate",
+      "selection_note": "Use with the validation AUC and no-replacement caveat."
+    },
+    {
+      "id": "v7-uncertainty",
+      "type": "chart",
+      "source_id": "research-repo",
+      "repo_path": "trad_ml_scorer/v7/paired_validation.png",
+      "source_url": "https://raw.githubusercontent.com/ext-weihsianglin/content-optimization-system/6a9606d3febaf62f76c8448c44f91a120107e5a6/trad_ml_scorer/v7/paired_validation.png",
+      "status": "candidate",
+      "selection_note": "Optional appendix evidence for model comparison uncertainty."
+    },
+    {
+      "id": "demo-review",
+      "type": "screenshot",
+      "source_id": "demo-repo",
+      "repo_path": "verification/review-preview.jpg",
+      "source_url": "https://raw.githubusercontent.com/ext-weihsianglin/demo-webapp/6c2cae734995e6aed1afb446512c9c9a62e99efd/verification/review-preview.jpg",
+      "status": "candidate",
+      "selection_note": "Use a wide crop that preserves query inputs and analysis controls."
+    },
+    {
+      "id": "demo-draft-scores",
+      "type": "screenshot",
+      "source_id": "demo-repo",
+      "repo_path": "verification/multiquery-draft-scores.jpg",
+      "source_url": "https://raw.githubusercontent.com/ext-weihsianglin/demo-webapp/6c2cae734995e6aed1afb446512c9c9a62e99efd/verification/multiquery-draft-scores.jpg",
+      "status": "candidate",
+      "selection_note": "Show before/after scores and regressions during the demo setup."
+    },
+    {
+      "id": "demo-source-preview",
+      "type": "screenshot",
+      "source_id": "demo-repo",
+      "repo_path": "verification/reconciled-source-preview.jpg",
+      "source_url": "https://raw.githubusercontent.com/ext-weihsianglin/demo-webapp/6c2cae734995e6aed1afb446512c9c9a62e99efd/verification/reconciled-source-preview.jpg",
+      "status": "candidate",
+      "selection_note": "Use for source traceability, not as a decorative screenshot."
+    },
+    {
+      "id": "demo-draft-preview",
+      "type": "screenshot",
+      "source_id": "demo-repo",
+      "repo_path": "verification/reconciled-draft-preview.jpg",
+      "source_url": "https://raw.githubusercontent.com/ext-weihsianglin/demo-webapp/6c2cae734995e6aed1afb446512c9c9a62e99efd/verification/reconciled-draft-preview.jpg",
+      "status": "candidate",
+      "selection_note": "Use only if it remains legible at presentation scale."
+    },
+    {
+      "id": "demo-error",
+      "type": "screenshot",
+      "source_id": "demo-repo",
+      "repo_path": "verification/reconciled-model-error.jpg",
+      "source_url": "https://raw.githubusercontent.com/ext-weihsianglin/demo-webapp/6c2cae734995e6aed1afb446512c9c9a62e99efd/verification/reconciled-model-error.jpg",
+      "status": "candidate",
+      "selection_note": "Optional trust-boundary evidence showing explicit failure behavior."
+    }
+  ]
+}
+

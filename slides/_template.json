@@ -1,0 +1,19 @@
+{
+  "id": "NN-slug",
+  "status": "outline",
+  "section": "section-name",
+  "appendix": false,
+  "time_minutes": 2,
+  "title": "Page title",
+  "purpose": "Why this page exists",
+  "takeaway": "One supportable point",
+  "theme": "paper",
+  "layout": "statement",
+  "content": {"bullets": []},
+  "visual": {"asset_id": null, "treatment": "none"},
+  "links": [],
+  "source_refs": [],
+  "speaker_notes": [],
+  "open_questions": []
+}
+

@@ -1,0 +1,19 @@
+{
+  "id": "02-assignment",
+  "status": "outline",
+  "section": "opening",
+  "appendix": false,
+  "time_minutes": 1.5,
+  "title": "The assignment",
+  "purpose": "Define the problem and evaluation standard.",
+  "takeaway": "Discover citation-associated page patterns, then apply them in a lightweight generation or refinement tool.",
+  "theme": "paper",
+  "layout": "statement",
+  "content": {"bullets": ["Analyze top and bottom cited pages within each hostname.", "Connect each page to the query that surfaced it.", "Turn supported findings into inspectable content changes."]},
+  "visual": {"asset_id": null, "treatment": "large-question"},
+  "links": [],
+  "source_refs": ["project-brief"],
+  "speaker_notes": ["Explain that top and bottom labels are relative within a hostname."],
+  "open_questions": []
+}
+

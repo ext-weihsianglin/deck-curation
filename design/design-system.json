@@ -1,0 +1,59 @@
+{
+  "name": "Editorial research studio",
+  "intent": "A calm, evidence-led system that feels technical without resembling a dashboard.",
+  "canvas": {
+    "width_inches": 13.333,
+    "height_inches": 7.5,
+    "safe_margin_inches": 0.55
+  },
+  "fonts": {
+    "family": "Aptos",
+    "title_pt": 34,
+    "deck_title_pt": 46,
+    "body_pt": 20,
+    "caption_pt": 13,
+    "minimum_pt": 17
+  },
+  "colors": {
+    "paper": "#F6F3EC",
+    "ink": "#111827",
+    "navy": "#13263A",
+    "blue": "#2F6BFF",
+    "cyan": "#6DD5ED",
+    "green": "#2E8B73",
+    "amber": "#D99A2B",
+    "red": "#C4473A",
+    "muted": "#697386",
+    "line": "#D8D5CE",
+    "white": "#FFFFFF"
+  },
+  "theme_variants": {
+    "paper": {"background": "paper", "foreground": "ink", "accent": "blue"},
+    "ink": {"background": "navy", "foreground": "white", "accent": "cyan"},
+    "evidence": {"background": "white", "foreground": "ink", "accent": "green"},
+    "demo": {"background": "ink", "foreground": "white", "accent": "blue"},
+    "appendix": {"background": "paper", "foreground": "ink", "accent": "muted"}
+  },
+  "layouts": [
+    "cover",
+    "statement",
+    "split",
+    "comparison",
+    "chart",
+    "pipeline",
+    "screenshot",
+    "demo",
+    "closing",
+    "reference"
+  ],
+  "rules": [
+    "Use one dominant composition per page.",
+    "Use no more than five body bullets; prefer fewer.",
+    "Keep evidence labels next to the evidence they describe.",
+    "Use theme variants rather than arbitrary per-page colors.",
+    "Use screenshots once unless a deliberate before-and-after comparison requires repetition.",
+    "Put detailed citations and demo contingencies in speaker notes.",
+    "Avoid card grids, pills, decorative UI chrome, slogans, and unsupported claims."
+  ]
+}
+

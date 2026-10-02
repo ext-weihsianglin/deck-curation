@@ -1,0 +1,19 @@
+{
+  "id": "05-extraction-decision",
+  "status": "outline",
+  "section": "evidence",
+  "appendix": false,
+  "time_minutes": 2.5,
+  "title": "Retention-first extraction",
+  "purpose": "Explain the most important preprocessing decision.",
+  "takeaway": "The system preserves page structure and uncertainty first, then lets downstream stages decide relevance.",
+  "theme": "paper",
+  "layout": "split",
+  "content": {"bullets": ["Keep ordered typed blocks, headings, lists, code, tables, links, and source locations.", "Attach quality warnings instead of silently dropping questionable content.", "Preserve raw snapshots and metadata separately from convenience Markdown views."]},
+  "visual": {"asset_id": null, "treatment": "raw-to-blocks-to-chunks"},
+  "links": [],
+  "source_refs": ["research-repo"],
+  "speaker_notes": ["Call this an engineering objective, not evidence about a proprietary model ingestion pipeline."],
+  "open_questions": []
+}
+

@@ -1,0 +1,19 @@
+{
+  "id": "07-signal-model",
+  "status": "outline",
+  "section": "model",
+  "appendix": false,
+  "time_minutes": 2.5,
+  "title": "From page structure to query-page signals",
+  "purpose": "Connect retained content to the scoring model.",
+  "takeaway": "The scorer compares the query with multiple page views while retaining document-only context features.",
+  "theme": "paper",
+  "layout": "pipeline",
+  "content": {"bullets": ["Query similarity to title, H1, outline, page, URL path, and section chunks.", "Ten semantic summaries plus 45 prompt-only or document-only context features.", "Logistic regression with website-grouped cross-validation and frozen splits."]},
+  "visual": {"asset_id": null, "treatment": "query-to-page-views"},
+  "links": [],
+  "source_refs": ["research-repo"],
+  "speaker_notes": ["Avoid describing embeddings as factual verification."],
+  "open_questions": []
+}
+

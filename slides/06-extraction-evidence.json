@@ -1,0 +1,19 @@
+{
+  "id": "06-extraction-evidence",
+  "status": "outline",
+  "section": "evidence",
+  "appendix": false,
+  "time_minutes": 3,
+  "title": "Extraction benchmark",
+  "purpose": "Show the quantitative tradeoff behind the extraction choice.",
+  "takeaway": "Conservative DOM extraction retained 126 of 129 required anchors, with substantially higher measured boilerplate leakage.",
+  "theme": "evidence",
+  "layout": "chart",
+  "content": {"bullets": ["Held-out HTML evaluation: 32 evaluable pages, 129 required anchors, 50 unwanted anchors.", "Conservative DOM retention: 97.7%; unwanted-anchor leakage: 92.0%.", "Readability retained 86.0% with 22.0% leakage; Trafilatura retained 77.5% with 22.0% leakage."]},
+  "visual": {"asset_id": "extraction-benchmark", "treatment": "retention-leakage-plot"},
+  "links": [],
+  "source_refs": ["research-repo"],
+  "speaker_notes": ["State that anchor-based retention and leakage are not whole-document recall and precision."],
+  "open_questions": ["Choose between a direct report capture and a native editable chart."]
+}
+

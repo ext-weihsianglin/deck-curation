@@ -1,0 +1,19 @@
+{
+  "id": "04-data-reality",
+  "status": "outline",
+  "section": "evidence",
+  "appendix": false,
+  "time_minutes": 2.5,
+  "title": "What the dataset can support",
+  "purpose": "Set the claim boundary before presenting model results.",
+  "takeaway": "The labels support within-host association analysis, not absolute citation probability or causal uplift.",
+  "theme": "evidence",
+  "layout": "comparison",
+  "content": {"bullets": ["9,700 rows across 970 hosts, with five top and five bottom records per host.", "Both classes contain pages that answer engines cited to some degree.", "The data omits citation counts, exposure, engine identity, and observation time.", "Only 29 matched host-query groups support strict same-query comparisons."]},
+  "visual": {"asset_id": null, "treatment": "supported-vs-unsupported"},
+  "links": [],
+  "source_refs": ["research-repo"],
+  "speaker_notes": ["Use plain language: prediction within this sample is different from proving an edit causes more citations."],
+  "open_questions": []
+}
+

@@ -1,0 +1,19 @@
+{
+  "id": "16-appendix-sources",
+  "status": "outline",
+  "section": "appendix",
+  "appendix": true,
+  "time_minutes": 0,
+  "title": "Source index",
+  "purpose": "Keep the primary project sources one click away.",
+  "takeaway": "The presentation derives its claims from the original brief and pinned research and demo revisions.",
+  "theme": "appendix",
+  "layout": "reference",
+  "content": {"bullets": ["Original project brief", "Content optimization research repository", "Content Studio demo repository"]},
+  "visual": {"asset_id": null, "treatment": "none"},
+  "links": [{"label": "Research repository", "url": "https://github.com/ext-weihsianglin/content-optimization-system/tree/6a9606d3febaf62f76c8448c44f91a120107e5a6"}, {"label": "Demo repository", "url": "https://github.com/ext-weihsianglin/demo-webapp/tree/6c2cae734995e6aed1afb446512c9c9a62e99efd"}],
+  "source_refs": ["project-brief", "research-repo", "demo-repo"],
+  "speaker_notes": [],
+  "open_questions": []
+}
+

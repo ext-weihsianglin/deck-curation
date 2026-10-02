@@ -1,0 +1,29 @@
+{
+  "title": "Content optimization for answer engines",
+  "subtitle": "Work trial presentation",
+  "audience": "Profound team",
+  "presentation_minutes": 45,
+  "reserved_qa_minutes": 9.5,
+  "max_pages": 20,
+  "aspect_ratio": "16:9",
+  "design_system": "design/design-system.json",
+  "slide_order": [
+    "01-title",
+    "02-assignment",
+    "03-what-shipped",
+    "04-data-reality",
+    "05-extraction-decision",
+    "06-extraction-evidence",
+    "07-signal-model",
+    "08-v7-result",
+    "09-product-workflow",
+    "10-trust-boundaries",
+    "11-demo-setup",
+    "12-live-demo",
+    "13-lessons",
+    "14-next-steps",
+    "15-appendix-definitions",
+    "16-appendix-sources"
+  ]
+}
+

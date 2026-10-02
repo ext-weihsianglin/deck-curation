@@ -1,0 +1,19 @@
+{
+  "id": "14-next-steps",
+  "status": "outline",
+  "section": "close",
+  "appendix": false,
+  "time_minutes": 2,
+  "title": "Next steps",
+  "purpose": "Close with a credible production path and invite discussion.",
+  "takeaway": "The next phase should strengthen human evaluation, serving parity, and measured rewrite quality before expanding optimization scope.",
+  "theme": "ink",
+  "layout": "closing",
+  "content": {"bullets": ["Establish human-reviewed extraction and rewrite quality gates.", "Resolve scorer training-serving context drift and calibrate reviewer-facing outputs.", "Freeze a separate P2 evaluation set before prompt or optimizer work.", "Add persistence, source-style preview, and HTML patching only after the review contract stabilizes."]},
+  "visual": {"asset_id": null, "treatment": "roadmap"},
+  "links": [],
+  "source_refs": ["research-repo", "demo-repo"],
+  "speaker_notes": ["End with the question: where would this workflow create the most value inside Profound?"],
+  "open_questions": []
+}
+

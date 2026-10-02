@@ -1,0 +1,19 @@
+{
+  "id": "12-live-demo",
+  "status": "outline",
+  "section": "demo",
+  "appendix": false,
+  "time_minutes": 8,
+  "title": "Live demo",
+  "purpose": "Run the complete product path without narrating every control.",
+  "takeaway": "The workflow keeps source evidence, model feedback, proposed edits, and score changes inspectable in one review surface.",
+  "theme": "demo",
+  "layout": "demo",
+  "content": {"bullets": []},
+  "visual": {"asset_id": "demo-source-preview", "treatment": "fallback-full-frame"},
+  "links": [{"label": "Local demo", "url": "http://localhost:3000"}],
+  "source_refs": ["demo-repo"],
+  "speaker_notes": ["Fallback A: use the prepared saved example and cached scoring path.", "Fallback B: show the registered source and draft screenshots if the app or model call fails.", "Stop after the before/after comparison; do not explore unrelated controls."],
+  "open_questions": ["Record the exact click path and expected values after the final demo rehearsal."]
+}
+

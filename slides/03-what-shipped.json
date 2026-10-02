@@ -1,0 +1,19 @@
+{
+  "id": "03-what-shipped",
+  "status": "outline",
+  "section": "opening",
+  "appendix": false,
+  "time_minutes": 2.5,
+  "title": "What the work produced",
+  "purpose": "Show concrete outputs before explaining the details.",
+  "takeaway": "The project connects reproducible analysis to a working review and rewrite experience.",
+  "theme": "paper",
+  "layout": "pipeline",
+  "content": {"bullets": ["A retention-first snapshot pipeline with source mappings and quality flags.", "Embedding and traditional-model prototypes for query-page comparison.", "A web app for extraction review, multi-query scoring, attributed drafting, and export."]},
+  "visual": {"asset_id": null, "treatment": "three-stage-pipeline"},
+  "links": [{"label": "Research repository", "url": "https://github.com/ext-weihsianglin/content-optimization-system"}, {"label": "Demo repository", "url": "https://github.com/ext-weihsianglin/demo-webapp"}],
+  "source_refs": ["research-repo", "demo-repo"],
+  "speaker_notes": ["Frame the outputs as a coherent path, not three separate projects."],
+  "open_questions": ["Replace generic pipeline with final architecture graphic during deck generation."]
+}
+

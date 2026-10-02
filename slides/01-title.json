@@ -1,0 +1,19 @@
+{
+  "id": "01-title",
+  "status": "outline",
+  "section": "opening",
+  "appendix": false,
+  "time_minutes": 0.5,
+  "title": "Content optimization for answer engines",
+  "purpose": "Open with the work-trial problem and the product outcome.",
+  "takeaway": "A research-backed workflow can inspect, score, and refine source content without hiding uncertainty.",
+  "theme": "ink",
+  "layout": "cover",
+  "content": {"subtitle": "Two-day work trial", "bullets": []},
+  "visual": {"asset_id": null, "treatment": "typographic"},
+  "links": [],
+  "source_refs": ["project-brief"],
+  "speaker_notes": ["Keep the opening under 30 seconds."],
+  "open_questions": ["Add presenter name and final presentation date."]
+}
+

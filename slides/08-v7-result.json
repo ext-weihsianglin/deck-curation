@@ -1,0 +1,19 @@
+{
+  "id": "08-v7-result",
+  "status": "outline",
+  "section": "model",
+  "appendix": false,
+  "time_minutes": 2.5,
+  "title": "V7 development result",
+  "purpose": "Present the model result with the correct uncertainty.",
+  "takeaway": "The semantic-plus-context prototype reached 0.6644 validation ROC-AUC and did not validate a replacement for V5.",
+  "theme": "evidence",
+  "layout": "chart",
+  "content": {"bullets": ["Training CV ROC-AUC: 0.6744; validation ROC-AUC: 0.6644.", "V5 validation ROC-AUC: 0.6744.", "The paired validation difference was -0.0099, with a 95% website-bootstrap interval from -0.0337 to +0.0135."]},
+  "visual": {"asset_id": "v7-comparison", "treatment": "full-bleed-chart-right"},
+  "links": [],
+  "source_refs": ["research-repo"],
+  "speaker_notes": ["Define ROC-AUC as ranking top above bottom records within this sampled problem."],
+  "open_questions": []
+}
+

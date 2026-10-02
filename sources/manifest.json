@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "id": "project-brief",
+      "kind": "local-document",
+      "title": "Content Generation based on AEO signals",
+      "location": "/Users/ext-weihsiang.lin/Downloads/project-brief.md",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "Original work-trial brief."
+    },
+    {
+      "id": "research-repo",
+      "kind": "git-repository",
+      "title": "Content optimization system",
+      "location": "https://github.com/ext-weihsianglin/content-optimization-system",
+      "revision": "6a9606d3febaf62f76c8448c44f91a120107e5a6",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "Research, preprocessing, representations, scorer reports, metrics, and limitations."
+    },
+    {
+      "id": "demo-repo",
+      "kind": "git-repository",
+      "title": "Content Studio demo webapp",
+      "location": "https://github.com/ext-weihsianglin/demo-webapp",
+      "revision": "6c2cae734995e6aed1afb446512c9c9a62e99efd",
+      "access": "read-only",
+      "checked_on": "2026-10-02",
+      "notes": "Demo workflow, verification artifacts, real/mock boundaries, and operational limits."
+    }
+  ]
+}
+

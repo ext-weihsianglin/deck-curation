@@ -1,0 +1,19 @@
+{
+  "id": "13-lessons",
+  "status": "outline",
+  "section": "close",
+  "appendix": false,
+  "time_minutes": 2,
+  "title": "What the work changed",
+  "purpose": "Summarize the decisions that improved the project.",
+  "takeaway": "The strongest progress came from narrowing claims, preserving evidence, and exposing failure states to the reviewer.",
+  "theme": "paper",
+  "layout": "statement",
+  "content": {"bullets": ["Dataset limits shaped the product language and evaluation design.", "Retention and provenance became prerequisites for trustworthy generation.", "A visible abstention or error beats a silent fallback when evidence or models are unavailable."]},
+  "visual": {"asset_id": null, "treatment": "large-type"},
+  "links": [],
+  "source_refs": ["research-repo", "demo-repo"],
+  "speaker_notes": ["Connect each lesson to a concrete decision shown earlier."],
+  "open_questions": []
+}
+

@@ -1,0 +1,19 @@
+{
+  "id": "11-demo-setup",
+  "status": "outline",
+  "section": "demo",
+  "appendix": false,
+  "time_minutes": 1,
+  "title": "Demo scenario",
+  "purpose": "Tell the audience what to watch for in the live flow.",
+  "takeaway": "The demo follows one page from source inspection through a source-grounded rewrite and multi-query comparison.",
+  "theme": "demo",
+  "layout": "statement",
+  "content": {"bullets": ["Load a held-out page and its host query set.", "Inspect retained source blocks and review flags.", "Generate a draft, verify evidence links, and compare query-level score changes."]},
+  "visual": {"asset_id": "demo-draft-scores", "treatment": "background-crop"},
+  "links": [],
+  "source_refs": ["demo-repo"],
+  "speaker_notes": ["Keep this page visible while switching to the application."],
+  "open_questions": ["Choose the final held-out example and preflight it before presenting."]
+}
+
